@@ -1,0 +1,151 @@
+\documentclass[a4paper, oneside]{article}
+\usepackage[margin=0.125in]{geometry}
+\usepackage{calc}
+\usepackage[skip=0pt]{parskip}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{fontspec}
+
+\definecolor{wolfblue}{HTML}{0038A8}
+\definecolor{dragongreen}{HTML}{008000}
+\definecolor{eaglered}{HTML}{A52A2A}
+
+\newlength{\cardwidth}
+\newlength{\cardheight}
+\newlength{\bleed}
+\newlength{\horizspace}
+\newlength{\vertspace}
+\newlength{\vertdist}
+\newlength{\horizdist}
+
+\setlength{\cardwidth}{2.5in}
+\setlength{\cardheight}{3.5in}
+\setlength{\bleed}{0.0625in}
+\setlength{\horizspace}{0.0625in}
+\setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
+\setlength{\vertspace}{0.0625in}
+\setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
+
+\tikzset{guidecross/.pic={
+	\draw (-\bleed,0) -- (\bleed,0);
+	\draw (0, -\bleed) -- (0, \bleed);
+}}
+
+\tikzset{cutguide/.pic={
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
+}}
+
+\tikzset{crown/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
+}}
+
+\tikzset{orb/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.575]{Images/orb.png}};
+}}
+
+\tikzset{mace/.pic={
+\node[transform shape, rotate=45] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
+}}
+
+\tikzset {bell/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
+}}
+
+\tikzset {book/.pic={
+\node[transform shape, rotate=180] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
+}}
+
+\tikzset {candle/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
+}}
+
+\tikzset{cardbackpattern/.pic={
+	\foreach \i in {-1.25, -1.0,...,1.25}
+		\foreach \j in {-1.75, -1.5, ..., 1.75}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+
+	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
+		\foreach \j in {-1.875, -1.625, ..., 1.875}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+}}
+
+\tikzset{cardbackprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+%	\path[fill=lightgray] (-\cardwidth/2 - \bleed, 0in) --%
+%	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+%	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+%	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+%	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+%	      cycle;
+	% Pattern for card back
+	\pic () at (0,0) {cardbackpattern={#1}};
+	% Cutting guides for corners of the cards	
+%	\pic () at (0,0) {cutguide};
+\end{scope}
+}}
+
+\tikzset{charactercardfrontprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	% Pattern for card front
+	\pic () at (0,0) {#1};
+	% Cutting guides for corners of the cards	
+	\pic () at (0,0) {cutguide};
+\end{scope}
+}}
+
+\begin{document}
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardbackprintable={Orange}};
+\pic () at (\horizdist,0) {cardbackprintable={Orange}};
+\pic () at (2\horizdist,0) {cardbackprintable={Orange}};
+
+\pic () at (0,-\vertdist) {cardbackprintable={Purple}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Purple}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Purple}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable={Brown}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Brown}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Brown}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {charactercardfrontprintable={crown}};
+\pic () at (\horizdist, 0) {charactercardfrontprintable={orb}};
+\pic () at (2\horizdist, 0) {charactercardfrontprintable={mace}};
+
+\pic () at (0, -\vertdist) {charactercardfrontprintable={bell}};
+\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable={book}};
+\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle}};
+
+\pic () at (0, -2\vertdist) {cutguide};
+\node[transform shape, rotate=90] () at (0, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Kida}};
+\pic () at (\horizdist, -2\vertdist) {cutguide};
+\node[transform shape, rotate=90] () at (\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Marus}};
+\pic () at (2\horizdist, -2\vertdist) {cutguide};
+\node[transform shape, rotate=90] () at (2\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Sorrell}};
+
+\end{tikzpicture}	
+\end{center}
+\end{document}

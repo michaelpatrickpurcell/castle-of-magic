@@ -1,0 +1,292 @@
+\documentclass[a4paper, oneside]{article}
+\usepackage[margin=0.125in]{geometry}
+\usepackage{calc}
+\usepackage[skip=0pt]{parskip}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{fontspec}
+\usepackage{multirow}
+
+\definecolor{wolfblue}{HTML}{0038A8}
+\definecolor{dragongreen}{HTML}{008000}
+\definecolor{eaglered}{HTML}{A52A2A}
+
+\newlength{\cardwidth}
+\newlength{\cardheight}
+\newlength{\bleed}
+\newlength{\horizspace}
+\newlength{\vertspace}
+\newlength{\vertdist}
+\newlength{\horizdist}
+
+\setlength{\cardwidth}{2.5in}
+\setlength{\cardheight}{3.5in}
+\setlength{\bleed}{0.0625in}
+\setlength{\horizspace}{0.0625in}
+\setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
+\setlength{\vertspace}{0.0625in}
+\setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
+
+\tikzset{guidecross/.pic={
+	\draw (-\bleed,0) -- (\bleed,0);
+	\draw (0, -\bleed) -- (0, \bleed);
+}}
+
+\tikzset{cutguide/.pic={
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
+}}
+
+
+\tikzset{cardbackpattern/.pic={
+	\foreach \i in {-1.25, -1.0,...,1.25}
+		\foreach \j in {-1.75, -1.5, ..., 1.75}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+
+	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
+		\foreach \j in {-1.875, -1.625, ..., 1.875}
+			\draw[very thick, #1] (\i,\j) circle (0.105);
+}}
+
+\tikzset{cardbackprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+%	\path[fill=lightgray] (-\cardwidth/2 - \bleed, 0in) --%
+%	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+%	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+%	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+%	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+%	      cycle;
+	% Pattern for card back
+	\pic () at (0,0) {cardbackpattern={#1}};
+	% Cutting guides for corners of the cards	
+%	\pic () at (0,0) {cutguide};
+\end{scope}
+}}
+
+\tikzset{charactercardfrontprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	% Cutting guides for corners of the cards	
+	\pic () at (0,0) {cutguide};
+\end{scope}
+}}
+
+\setmainfont[Scale=1.0]{Cinzel}
+\begin{document}
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardbackprintable={Red}};
+\pic () at (\horizdist,0) {cardbackprintable={Red}};
+\pic () at (2\horizdist,0) {cardbackprintable={Red}};
+
+\pic () at (0,-\vertdist) {cardbackprintable={Red}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Red}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Red}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable={Blue}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Blue}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Blue}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {charactercardfrontprintable};
+\node[rotate=90] () at (0,0) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
+Winner & Crown & Orb & Scepter \\ \midrule
+Dragon & $2$ & $2$ & $2$\\
+Eagle & $1$ & $1$ & $1$ \\
+Wolf & $-$ & $-$ & $-$
+\end{tabular}
+};
+\pic () at (\horizdist, 0) {charactercardfrontprintable};
+\node[rotate=90] () at (\horizdist, 0) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
+Winner & Crown & Orb & Scepter \\ \midrule
+Dragon & $2$ & $2$ & $2$ \\
+Eagle & $-$ & $-$ & $-$ \\
+Wolf & $1$ & $1$ & $1$
+\end{tabular}
+};
+\pic () at (2\horizdist, 0) {charactercardfrontprintable};
+\node[rotate=90] () at (2\horizdist, 0) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
+Winner & Crown & Orb & Scepter \\ \midrule
+Dragon & $-$ & $-$ & $-$ \\
+Eagle & $2$ & $2$ & $2$ \\
+Wolf & $1$ & $1$ & $1$
+\end{tabular}
+};
+
+\pic () at (0,-\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (0,-\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
+Winner & Crown & Orb & Scepter \\ \midrule
+Dragon & $1$ & $1$ & $1$\\
+Eagle & $2$ & $2$ & $2$ \\
+Wolf & $-$ & $-$ & $-$
+\end{tabular}
+};
+\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (\horizdist, -\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
+Winner & Crown & Orb & Scepter \\ \midrule
+Dragon & $1$ & $1$ & $1$\\
+Eagle & $-$ & $-$ & $-$ \\
+Wolf & $2$ & $2$ & $2$
+\end{tabular}
+};
+\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (2\horizdist, -\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
+%& & & \\ %\toprule
+Winner & Crown & Orb & Scepter \\ \midrule
+Dragon & $-$ & $-$ & $-$ \\
+Eagle & $1$ & $1$ & $1$ \\
+Wolf & $2$ & $2$ & $2$
+\end{tabular}
+};
+
+\pic () at (0,-2\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (0,-2\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Arcana} \\ \cmidrule(l){2-4}
+Winner & Bell & Book & Candle \\ \midrule
+Chaos & $2$ & $-$ & $-$\\
+Order & $-$ & $2$ & $2$
+\end{tabular}
+};
+\pic () at (\horizdist, -2\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (\horizdist, -2\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Arcana} \\ \cmidrule(l){2-4}
+Winner & Bell & Book & Candle \\ \midrule
+Chaos & $-$ & $2$ & $-$\\
+Order & $2$ & $-$ & $2$
+\end{tabular}
+};
+\pic () at (2\horizdist, -2\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (2\horizdist, -2\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Arcana} \\ \cmidrule(l){2-4}
+Winner & Bell & Book & Candle \\ \midrule
+Chaos & $-$ & $-$ & $2$ \\
+Order & $2$ & $2$ & $-$
+\end{tabular}
+};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardbackprintable={Blue}};
+\pic () at (\horizdist,0) {cardbackprintable={Blue}};
+\pic () at (2\horizdist,0) {cardbackprintable={Blue}};
+
+\pic () at (0,-\vertdist) {cardbackprintable={Green}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Green}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Green}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable={Green}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Green}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Green}};
+
+\end{tikzpicture}	
+\end{center}
+\newpage
+\phantom{a}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,-0\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (0,-0\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Arcana} \\ \cmidrule(l){2-4}
+Winner & Bell & Book & Candle \\ \midrule
+Chaos & $-$ & $2$ & $2$\\
+Order & $2$ & $-$ & $-$
+\end{tabular}
+};
+\pic () at (\horizdist, -0\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (\horizdist, -0\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Arcana} \\ \cmidrule(l){2-4}
+Winner & Bell & Book & Candle \\ \midrule
+Chaos & $2$ & $-$ & $2$\\
+Order & $-$ & $2$ & $-$
+\end{tabular}
+};
+\pic () at (2\horizdist, -0\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (2\horizdist, -0\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Arcana} \\ \cmidrule(l){2-4}
+Winner & Bell & Book & Candle \\ \midrule
+Chaos & $2$ & $2$ & $-$ \\
+Order & $-$ & $-$ & $2$
+\end{tabular}
+};
+
+\pic () at (0, -\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (0,-\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Kingdom} \\ \cmidrule(l){2-4}
+Winner & Kida & Marus & Sorrell \\ \midrule
+Peace & $1$ & $-$ & $-$\\
+War & $-$ & $1$ & $1$ \\
+\end{tabular}
+};
+\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (\horizdist,-\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Kingdom} \\ \cmidrule(l){2-4}
+Winner & Kida & Marus & Sorrell \\ \midrule
+Peace & $-$ & $1$ & $-$\\
+War & $1$ & $-$ & $1$ \\
+\end{tabular}
+};
+\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (2\horizdist,-\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Kingdom} \\ \cmidrule(l){2-4}
+Winner & Kida & Marus & Sorrell \\ \midrule
+Peace & $-$ & $-$ & $1$\\
+War & $1$ & $1$ & $-$ \\
+\end{tabular}
+};
+
+\pic () at (0, -2\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (0,-2\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Kingdom} \\ \cmidrule(l){2-4}
+Winner & Kida & Marus & Sorrell \\ \midrule
+Peace & $-$ & $1$ & $1$\\
+War & $1$ & $-$ & $-$ \\
+\end{tabular}
+};
+\pic () at (\horizdist, -2\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (\horizdist,-2\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Kingdom} \\ \cmidrule(l){2-4}
+Winner & Kida & Marus & Sorrell \\ \midrule
+Peace & $1$ & $-$ & $1$\\
+War & $-$ & $1$ & $-$ \\
+\end{tabular}
+};
+\pic () at (2\horizdist, -2\vertdist) {charactercardfrontprintable};
+\node[rotate=90] () at (2\horizdist,-2\vertdist) {\begin{tabular}{l c c c}
+& \multicolumn{3}{c}{Kingdom} \\ \cmidrule(l){2-4}
+Winner & Kida & Marus & Sorrell \\ \midrule
+Peace & $1$ & $1$ & $-$\\
+War & $-$ & $-$ & $1$ \\
+\end{tabular}
+};
+\end{tikzpicture}	
+\end{center}
+\end{document}
