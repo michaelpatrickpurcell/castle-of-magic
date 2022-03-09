@@ -1,2 +1,2 @@
-# castle-of-magic
-A modern reimagining of a classic board game
+# Castle of Magic 
+A modern reimagining of a classic boardgame of magic and intrigue.
