@@ -8,6 +8,9 @@
 \usepackage{booktabs}
 \usepackage{fontspec}
 
+\input{coats_of_arms.tex}
+
+
 \definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
@@ -64,17 +67,17 @@
 \node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
 }}
 
-\tikzset{kida/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/kida.png}};
-}}
+%\tikzset{kida/.pic={
+%\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/kida.png}};
+%}}
 
-\tikzset{marus/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/marus.png}};
-}}
+%\tikzset{marus/.pic={
+%\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/marus.png}};
+%}}
 
-\tikzset{sorrell/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/sorrell.png}};
-}}
+%\tikzset{sorrell/.pic={
+%\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/sorrell.pdf}};
+%}}
 
 \tikzset{cardbackpattern/.pic={
 	\foreach \i in {-1.25, -1.0,...,1.25}
@@ -122,6 +125,8 @@
 \end{scope}
 }}
 
+\pagestyle{empty}
+
 \begin{document}
 \phantom{a}
 \begin{center}
@@ -142,7 +147,7 @@
 \newpage
 \phantom{a}
 \begin{center}
-\begin{tikzpicture}[x=1in, y=1in]
+\begin{tikzpicture}[x=1in, y=1in, transform shape]
 \pic () at (0,0) {charactercardfrontprintable={crown}};
 \pic () at (\horizdist, 0) {charactercardfrontprintable={orb}};
 \pic () at (2\horizdist, 0) {charactercardfrontprintable={mace}};
@@ -151,17 +156,12 @@
 \pic () at (\horizdist, -\vertdist) {charactercardfrontprintable={book}};
 \pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle}};
 
-%\pic () at (0, -2\vertdist) {cutguide};
-%\node[transform shape, rotate=90] () at (0, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Kida}};
-%\pic () at (\horizdist, -2\vertdist) {cutguide};
-%\node[transform shape, rotate=90] () at (\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Marus}};
-%\pic () at (2\horizdist, -2\vertdist) {cutguide};
-%\node[transform shape, rotate=90] () at (2\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Sorrell}};
-
-\pic () at (0, -2\vertdist) {charactercardfrontprintable={kida}};
-\pic () at (\horizdist, -2\vertdist) {charactercardfrontprintable={marus}};
-\pic () at (2\horizdist, -2\vertdist) {charactercardfrontprintable={sorrell}};
-
+\pic () at (0, -2\vertdist) {cutguide};
+\pic[xshift=1.775cm, yshift=-1.6875cm, rotate=90] () at (0, -2\vertdist) {kida};
+\pic () at (\horizdist, -2\vertdist) {cutguide};
+\pic[xshift=1.775cm, yshift=-1.6875cm, rotate=90] () at (\horizdist, -2\vertdist) {marus};
+\pic () at (2\horizdist, -2\vertdist) {cutguide};
+\pic[xshift=1.775cm, yshift=-1.6875cm, rotate=90] () at (2\horizdist, -2\vertdist) {sorrell};
 \end{tikzpicture}	
 \end{center}
 \end{document}
