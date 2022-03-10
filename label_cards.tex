@@ -52,16 +52,28 @@
 \node[transform shape, rotate=45] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
 }}
 
-\tikzset {bell/.pic={
+\tikzset{bell/.pic={
 \node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
 }}
 
-\tikzset {book/.pic={
+\tikzset{book/.pic={
 \node[transform shape, rotate=180] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
 }}
 
-\tikzset {candle/.pic={
+\tikzset{candle/.pic={
 \node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
+}}
+
+\tikzset{kida/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/kida.png}};
+}}
+
+\tikzset{marus/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/marus.png}};
+}}
+
+\tikzset{sorrell/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/sorrell.png}};
 }}
 
 \tikzset{cardbackpattern/.pic={
@@ -139,12 +151,16 @@
 \pic () at (\horizdist, -\vertdist) {charactercardfrontprintable={book}};
 \pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle}};
 
-\pic () at (0, -2\vertdist) {cutguide};
-\node[transform shape, rotate=90] () at (0, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Kida}};
-\pic () at (\horizdist, -2\vertdist) {cutguide};
-\node[transform shape, rotate=90] () at (\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Marus}};
-\pic () at (2\horizdist, -2\vertdist) {cutguide};
-\node[transform shape, rotate=90] () at (2\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Sorrell}};
+%\pic () at (0, -2\vertdist) {cutguide};
+%\node[transform shape, rotate=90] () at (0, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Kida}};
+%\pic () at (\horizdist, -2\vertdist) {cutguide};
+%\node[transform shape, rotate=90] () at (\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Marus}};
+%\pic () at (2\horizdist, -2\vertdist) {cutguide};
+%\node[transform shape, rotate=90] () at (2\horizdist, -2\vertdist) {{\setmainfont[Scale=2.0]{Cinzel} \Huge Sorrell}};
+
+\pic () at (0, -2\vertdist) {charactercardfrontprintable={kida}};
+\pic () at (\horizdist, -2\vertdist) {charactercardfrontprintable={marus}};
+\pic () at (2\horizdist, -2\vertdist) {charactercardfrontprintable={sorrell}};
 
 \end{tikzpicture}	
 \end{center}
