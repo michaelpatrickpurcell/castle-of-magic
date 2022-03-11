@@ -1,40 +1,27 @@
-%\documentclass{standalone}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 \usepackage{calc}
 \usepackage{fontspec}
-%\setmainfont[Scale=4.0]{Cinzel}
-\setmainfont[Scale=1.0]{Cinzel}
+\setmainfont[Scale=3.0]{Cinzel}
 
 \definecolor{paper}{HTML}{F1EBDB}
 \definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
+\definecolor{kidagold}{HTML}{FFD700}
 
-\colorlet{color1}{gray!40}
-\colorlet{color2}{gray}
 \newlength\myrblen
 \newlength\myrbht
 \newlength\myrbarc
-%\setlength\myrblen{1.5cm}
-\setlength\myrblen{0.375cm}
-\setlength\myrbht{2.575ex}
-%\setlength\myrbarc{5pt}
-\setlength\myrbarc{1.25pt}
+\setlength\myrblen{1cm}
+\setlength\myrbht{1.1cm}
+\setlength\myrbarc{0.1cm}
 
-%\makeatletter
-%\define@key{ribbonpar}{color1}{\colorlet{color1}{#1}}
-%\define@key{ribbonpar}{color2}{\colorlet{color2}{#1}}
-%\define@key{ribbonpar}{rblength}{\setlength\myrblen{#1}}
-%\define@key{ribbonpar}{rbheight}{\setlength\myrbht{#1}}
-%\define@key{ribbonpar}{rbarc}{\setlength\myrbarc{#1}}
-%\makeatother
-
-\tikzset{sorrell/.pic={%
+\tikzset{ribbon/.pic={%
 \path
   (0,0) --
   ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
-  ++(0,- \myrbarc) --
+  ++(0,-\myrbarc) --
   ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
   ++(0,- \myrbarc) --
   ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
@@ -48,14 +35,14 @@
   ++(0.5\myrbht,0.5\myrbht) --
   ++(-0.5\myrbht,0.5\myrbht) --
     cycle;
-\draw[thin, fill=paper!75!black]
+\draw[thick, fill=paper!75!black]
   (aux1) -- ++(0,-0.5\myrbht) coordinate (aux7) -- (aux2|-aux7) -- (aux2|-aux1) -- cycle;  
-\draw[thin, fill=paper!75!black]
+\draw[thick, fill=paper!75!black]
   (aux4) -- ++(0,-0.5\myrbht) coordinate (aux8) -- (aux3|-aux8) -- (aux3|-aux4) -- cycle;  
-\draw[thin,fill=paper]
+\draw[thick,fill=paper]
   (0,0) --
   ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
-  ++(0,- \myrbarc) --
+  ++(0,-\myrbarc) --
   ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
   ++(0,- \myrbarc) --
   ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
@@ -68,7 +55,7 @@
   ++(-9\myrblen,0) --
   ++(0.5\myrbht,0.5\myrbht) --
   ++(-0.5\myrbht,0.5\myrbht) --
-    cycle;
+   cycle;
 \path
   (aux2) {[rounded corners=1.5pt] -- 
   ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) -- 
@@ -79,173 +66,53 @@
   ++(0,\dimexpr-\myrbht-0.5\myrbarc\relax) -- 
   (aux3|-aux5)} -- 
   ([yshift=-\myrbarc]aux3);
-\draw[thin]
+\draw[thick]
   (aux2) {[rounded corners=1.5pt] -- 
   ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) --  
   (aux3|-aux5)} -- 
   (aux3);
   
-\path (aux2) -- node[midway, anchor=north, yshift=-0.5\myrbarc] {Sorrell} (aux3);
-
-\begin{scope}
-	\clip (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
-	
-	\draw[thin, fill=eaglered] (0, 2.5cm) -- (1.6875cm, 2.5cm) -- (1.6875cm, 4.125cm) -- (0, 16.5cm) -- cycle;
-	\draw[thin, fill=wolfblue] (3.375cm, 2.5cm) -- (1.6875cm,2.5cm) -- (1.6875cm, 4.125cm) -- (13.5cm,16.5cm) -- cycle;
-	\draw[thin, fill=eaglered] (4.125cm, 2.5cm) -- (1.6875cm, 2.5cm) -- (1.6875cm, 0cm) -- (4.125cm,0cm) -- cycle;
-	\draw[thin, fill=wolfblue] (0,2.5cm) -- (1.6875cm, 2.5cm) -- (1.6875cm, 0) -- (0,0) -- cycle;
-
-\end{scope}
-
-\draw[thin] (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
+\node[inner sep=0pt] () at (4.5\myrblen, -2.5\myrbarc - 0.5\myrbht) {#1};
 }}
 
-\tikzset{marus/.pic={%
-\path
-  (0,0) --
-  ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
-  ++(0,- \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
-  ++(0,- \myrbarc) --
-  ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
-  ++(0, \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux4)
-  ++(0, \myrbarc) --
-  ++(3\myrblen,0) --
-  ++(-0.5\myrbht,-0.5\myrbht) --
-  ++(0.5\myrbht,-0.5\myrbht) --
-  ++(-9\myrblen,0) --
-  ++(0.5\myrbht,0.5\myrbht) --
-  ++(-0.5\myrbht,0.5\myrbht) --
-    cycle;
-\draw[thin, fill=paper!75!black]
-  (aux1) -- ++(0,-0.5\myrbht) coordinate (aux7) -- (aux2|-aux7) -- (aux2|-aux1) -- cycle;  
-\draw[thin, fill=paper!75!black]
-  (aux4) -- ++(0,-0.5\myrbht) coordinate (aux8) -- (aux3|-aux8) -- (aux3|-aux4) -- cycle;  
-\draw[thin,fill=paper]
-  (0,0) --
-  ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
-  ++(0,- \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
-  ++(0,- \myrbarc) --
-  ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
-  ++(0, \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux4)
-  ++(0, \myrbarc) --
-  ++(3\myrblen,0) --
-  ++(-0.5\myrbht,-0.5\myrbht) --
-  ++(0.5\myrbht,-0.5\myrbht) --
-  ++(-9\myrblen,0) --
-  ++(0.5\myrbht,0.5\myrbht) --
-  ++(-0.5\myrbht,0.5\myrbht) --
-    cycle;
-\path
-  (aux2) {[rounded corners=1.5pt] -- 
-  ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) -- 
-  (aux3|-aux5)} -- 
-  (aux3);
-\fill[paper]
-  ([yshift=-\myrbarc]aux2) {[rounded corners=1.5pt] -- 
-  ++(0,\dimexpr-\myrbht-0.5\myrbarc\relax) -- 
-  (aux3|-aux5)} -- 
-  ([yshift=-\myrbarc]aux3);
-\draw[thin]
-  (aux2) {[rounded corners=1.5pt] -- 
-  ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) --  
-  (aux3|-aux5)} -- 
-  (aux3);
-  
-\path (aux2) -- node[midway, anchor=north, yshift=-0.5\myrbarc] {Marus} (aux3);
-
-\begin{scope}
-	\clip (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
-	
-
-	\fill[dragongreen] (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
-	\draw[thin, fill=White] (0, 3.375cm) -- (0, 4.125cm) -- (0.75cm, 4.125cm) -- (4.875cm, 0) -- (4.875cm, -0.75cm) -- (4.125cm, -0.75cm) -- cycle;
-
-\end{scope}
-
-\draw[thin] (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
+\tikzset{shield/.pic={
+	\draw[ultra thick] (0, 0cm) -- (0, 3cm) -- (9cm, 3cm) -- (9cm, 0cm) arc (0:-60:9cm) arc (240:180:9cm);
 }}
 
-
-\tikzset{kida/.pic={%
-\path
-  (0,0) --
-  ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
-  ++(0,- \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
-  ++(0,- \myrbarc) --
-  ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
-  ++(0, \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux4)
-  ++(0, \myrbarc) --
-  ++(3\myrblen,0) --
-  ++(-0.5\myrbht,-0.5\myrbht) --
-  ++(0.5\myrbht,-0.5\myrbht) --
-  ++(-9\myrblen,0) --
-  ++(0.5\myrbht,0.5\myrbht) --
-  ++(-0.5\myrbht,0.5\myrbht) --
-    cycle;
-\draw[thin, fill=paper!75!black]
-  (aux1) -- ++(0,-0.5\myrbht) coordinate (aux7) -- (aux2|-aux7) -- (aux2|-aux1) -- cycle;  
-\draw[thin, fill=paper!75!black]
-  (aux4) -- ++(0,-0.5\myrbht) coordinate (aux8) -- (aux3|-aux8) -- (aux3|-aux4) -- cycle;  
-\draw[thin,fill=paper]
-  (0,0) --
-  ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
-  ++(0,- \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
-  ++(0,- \myrbarc) --
-  ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
-  ++(0, \myrbarc) --
-  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux4)
-  ++(0, \myrbarc) --
-  ++(3\myrblen,0) --
-  ++(-0.5\myrbht,-0.5\myrbht) --
-  ++(0.5\myrbht,-0.5\myrbht) --
-  ++(-9\myrblen,0) --
-  ++(0.5\myrbht,0.5\myrbht) --
-  ++(-0.5\myrbht,0.5\myrbht) --
-    cycle;
-\path
-  (aux2) {[rounded corners=1.5pt] -- 
-  ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) -- 
-  (aux3|-aux5)} -- 
-  (aux3);
-\fill[paper]
-  ([yshift=-\myrbarc]aux2) {[rounded corners=1.5pt] -- 
-  ++(0,\dimexpr-\myrbht-0.5\myrbarc\relax) -- 
-  (aux3|-aux5)} -- 
-  ([yshift=-\myrbarc]aux3);
-\draw[thin]
-  (aux2) {[rounded corners=1.5pt] -- 
-  ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) --  
-  (aux3|-aux5)} -- 
-  (aux3);
-  
-\path (aux2) -- node[midway, anchor=north, yshift=-0.5\myrbarc] {Kida} (aux3);
-
-\begin{scope}
-	\clip (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
+\tikzset{Sorrell/.pic={
+	\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
 	
-
-	\fill[dragongreen] (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
-	\draw[thin, fill=White] (0, 3.375cm) -- (0, 4.125cm) -- (0.75cm, 4.125cm) -- (4.875cm, 0) -- (4.875cm, -0.75cm) -- (4.125cm, -0.75cm) -- cycle;
-
-	\fill[Yellow] (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
-	\draw[ultra thick, fill=Black] (0.75cm, 4.125cm) -- (2.625cm, 4.125cm) -- (1.6875cm, 0) -- cycle;
+	\draw[thick, fill=eaglered] (0, -2cm) -- (4.5cm, -2cm) -- (4.5cm, 3cm) -- (0, 3cm) -- cycle;
+	\draw[thick, fill=wolfblue] (9cm, -2cm) -- (4.5cm,-2cm) -- (4.5cm, 3cm) -- (9cm,3cm) -- cycle;
+	\draw[thick, fill=wolfblue] (0,-2cm) -- (4.5cm, -2cm) -- (4.5cm, -9) -- (0,-9cm) -- cycle;
+	\draw[thick, fill=eaglered] (9cm, -2cm) -- (4.5cm, -2cm) -- (4.5cm, -9cm) -- (9cm,-9cm) -- cycle;
 
 \end{scope}
-
-\draw[thin] (0,3cm) -- (0,4.125cm) -- (3.375cm,4.125cm) -- (3.375cm,3cm) arc (0:-60:3.375cm) arc (240:180:3.375cm);
 }}
 
+\tikzset{Marus/.pic={
+\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
 
-%\begin{document}
-%	\begin{tikzpicture}
-%		\pic () at (0,0) {sorrell};
-%		\draw (0,-0.575cm) -- (5,-0.575cm);
-%	\end{tikzpicture}
-%\end{document}
+	\fill[dragongreen] (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	\draw[thick, fill=White] (0, 1cm) -- (0, 3cm) -- (2cm, 3cm) -- (14cm, -9cm) -- (14cm, -11cm) -- (12cm, -11cm) -- cycle;
+
+\end{scope}
+}}
+
+\tikzset{Kida/.pic={
+\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	
+	\fill[kidagold] (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	\draw[ultra thick, fill=Black] (2cm, 3cm) -- (7cm, 3cm) -- (4.5cm, -8cm) -- cycle;
+
+\end{scope}
+}}
+
+\tikzset{coa/.pic={
+	\pic () at (0,0) {ribbon={#1}};
+	\pic () at (0,8cm) {#1};
+	\pic () at (0,8cm) {shield};
+}}
