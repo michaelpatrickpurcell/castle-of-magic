@@ -67,18 +67,6 @@
 \node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
 }}
 
-%\tikzset{kida/.pic={
-%\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/kida.png}};
-%}}
-
-%\tikzset{marus/.pic={
-%\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/marus.png}};
-%}}
-
-%\tikzset{sorrell/.pic={
-%\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.275]{Images/sorrell.pdf}};
-%}}
-
 \tikzset{cardbackpattern/.pic={
 	\foreach \i in {-1.25, -1.0,...,1.25}
 		\foreach \j in {-1.75, -1.5, ..., 1.75}
@@ -157,11 +145,11 @@
 \pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle}};
 
 \pic () at (0, -2\vertdist) {cutguide};
-\pic[xshift=1.775cm, yshift=-1.6875cm, rotate=90] () at (0, -2\vertdist) {kida};
+\pic[rotate=90, scale=0.45, xshift=-4.5cm, yshift=-4.8cm] () at (0, -2\vertdist) {coa={Kida}};
 \pic () at (\horizdist, -2\vertdist) {cutguide};
-\pic[xshift=1.775cm, yshift=-1.6875cm, rotate=90] () at (\horizdist, -2\vertdist) {marus};
+\pic[rotate=90, scale=0.45, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist, -2\vertdist) {coa={Marus}};
 \pic () at (2\horizdist, -2\vertdist) {cutguide};
-\pic[xshift=1.775cm, yshift=-1.6875cm, rotate=90] () at (2\horizdist, -2\vertdist) {sorrell};
+\pic[rotate=90, scale=0.45, xshift=-4.5cm, yshift=-4.8cm] () at (2\horizdist, -2\vertdist) {coa={Sorrell}};
 \end{tikzpicture}	
 \end{center}
 \end{document}
