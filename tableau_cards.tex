@@ -6,9 +6,18 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
 
+\usepackage{fontspec}
+\setmainfont[Scale=3.0]{Cinzel}
+
+\usepackage{contour}
+\contournumber{256}
+\contourlength{0.1cm}
+
 \definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
+
+\colorlet{Tableau}{black}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -65,6 +74,7 @@
 %	      cycle;
 	% Pattern for card back
 	\pic () at (0,0) {cardbackpattern={#1}};
+	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}};
 	% Cutting guides for corners of the cards	
 %	\pic () at (0,0) {cutguide};
 \end{scope}
@@ -98,24 +108,24 @@
 }}
 
 \begin{document}
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={black}};
-\pic () at (\horizdist,0) {cardbackprintable={black}};
-\pic () at (2\horizdist,0) {cardbackprintable={black}};
+\pic () at (0,0) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,0) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,0) {cardbackprintable={Tableau}};
 
-\pic () at (0,-\vertdist) {cardbackprintable={black}};
-\pic () at (\horizdist,-\vertdist) {cardbackprintable={black}};
-\pic () at (2\horizdist,-\vertdist) {cardbackprintable={black}};
+\pic () at (0,-\vertdist) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Tableau}};
 
-\pic () at (0,-2\vertdist) {cardbackprintable={black}};
-\pic () at (\horizdist,-2\vertdist) {cardbackprintable={black}};
-\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={black}};
+\pic () at (0,-2\vertdist) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Tableau}};
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
 \pic () at (0,0) {tableaucardfrontprintable={dragon}};
@@ -132,24 +142,24 @@
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={black}};
-\pic () at (\horizdist,0) {cardbackprintable={black}};
-\pic () at (2\horizdist,0) {cardbackprintable={black}};
+\pic () at (0,0) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,0) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,0) {cardbackprintable={Tableau}};
 
-\pic () at (0,-\vertdist) {cardbackprintable={black}};
-\pic () at (\horizdist,-\vertdist) {cardbackprintable={black}};
-\pic () at (2\horizdist,-\vertdist) {cardbackprintable={black}};
+\pic () at (0,-\vertdist) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Tableau}};
 
-\pic () at (0,-2\vertdist) {cardbackprintable={black}};
-\pic () at (\horizdist,-2\vertdist) {cardbackprintable={black}};
-\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={black}};
+\pic () at (0,-2\vertdist) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Tableau}};
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
 \pic () at (0,0) {tableaucardfrontprintable={eagle}};
@@ -166,24 +176,24 @@
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={black}};
-\pic () at (\horizdist,0) {cardbackprintable={black}};
-\pic () at (2\horizdist,0) {cardbackprintable={black}};
+\pic () at (0,0) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,0) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,0) {cardbackprintable={Tableau}};
 
-\pic () at (0,-\vertdist) {cardbackprintable={black}};
-\pic () at (\horizdist,-\vertdist) {cardbackprintable={black}};
-\pic () at (2\horizdist,-\vertdist) {cardbackprintable={black}};
+\pic () at (0,-\vertdist) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Tableau}};
 
-\pic () at (0,-2\vertdist) {cardbackprintable={black}};
-\pic () at (\horizdist,-2\vertdist) {cardbackprintable={black}};
-\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={black}};
+\pic () at (0,-2\vertdist) {cardbackprintable={Tableau}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Tableau}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Tableau}};
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
 \pic () at (0,0) {tableaucardfrontprintable={wolf}};

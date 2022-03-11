@@ -8,10 +8,17 @@
 \usepackage{booktabs}
 \usepackage{fontspec}
 \usepackage{multirow}
+\usepackage{contour}
+\contournumber{256}
+\contourlength{0.1cm}
 
 \definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
+
+\colorlet{Guild}{eaglered}
+\colorlet{Conflict}{wolfblue}
+\colorlet{Ritual}{dragongreen}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -68,6 +75,8 @@
 %	      cycle;
 	% Pattern for card back
 	\pic () at (0,0) {cardbackpattern={#1}};
+	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}}; 	
+
 	% Cutting guides for corners of the cards	
 %	\pic () at (0,0) {cutguide};
 \end{scope}
@@ -86,26 +95,26 @@
 \end{scope}
 }}
 
-\setmainfont[Scale=1.0]{Cinzel}
+\setmainfont[Scale=3.0]{Cinzel}
 \begin{document}
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={Red}};
-\pic () at (\horizdist,0) {cardbackprintable={Red}};
-\pic () at (2\horizdist,0) {cardbackprintable={Red}};
+\pic () at (0,0) {cardbackprintable={Guild}};
+\pic () at (\horizdist,0) {cardbackprintable={Guild}};
+\pic () at (2\horizdist,0) {cardbackprintable={Guild}};
 
-\pic () at (0,-\vertdist) {cardbackprintable={Red}};
-\pic () at (\horizdist,-\vertdist) {cardbackprintable={Red}};
-\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Red}};
+\pic () at (0,-\vertdist) {cardbackprintable={Guild}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Guild}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Guild}};
 
-\pic () at (0,-2\vertdist) {cardbackprintable={Blue}};
-\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Blue}};
-\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Blue}};
+\pic () at (0,-2\vertdist) {cardbackprintable={Conflict}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Conflict}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Conflict}};
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
 \pic () at (0,0) {charactercardfrontprintable};
@@ -192,25 +201,25 @@ Order & $2$ & $2$ & $-$
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={Blue}};
-\pic () at (\horizdist,0) {cardbackprintable={Blue}};
-\pic () at (2\horizdist,0) {cardbackprintable={Blue}};
+\pic () at (0,0) {cardbackprintable={Conflict}};
+\pic () at (\horizdist,0) {cardbackprintable={Conflict}};
+\pic () at (2\horizdist,0) {cardbackprintable={Conflict}};
 
-\pic () at (0,-\vertdist) {cardbackprintable={Green}};
-\pic () at (\horizdist,-\vertdist) {cardbackprintable={Green}};
-\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Green}};
+\pic () at (0,-\vertdist) {cardbackprintable={Ritual}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Ritual}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Ritual}};
 
-\pic () at (0,-2\vertdist) {cardbackprintable={Green}};
-\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Green}};
-\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Green}};
+\pic () at (0,-2\vertdist) {cardbackprintable={Ritual}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Ritual}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Ritual}};
 
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
 \pic () at (0,-0\vertdist) {charactercardfrontprintable};

@@ -7,6 +7,9 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 \usepackage{fontspec}
+\usepackage{contour}
+\contournumber{256}
+\contourlength{0.1cm}
 
 \input{coats_of_arms.tex}
 
@@ -14,6 +17,11 @@
 \definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
+\definecolor{kidagold}{HTML}{FFD700}
+
+\colorlet{Regalia}{Orange}
+\colorlet{Arcanum}{Purple}
+\colorlet{Country}{Brown}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -93,6 +101,7 @@
 %	      cycle;
 	% Pattern for card back
 	\pic () at (0,0) {cardbackpattern={#1}};
+	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}}; 	
 	% Cutting guides for corners of the cards	
 %	\pic () at (0,0) {cutguide};
 \end{scope}
@@ -116,24 +125,24 @@
 \pagestyle{empty}
 
 \begin{document}
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={Orange}};
-\pic () at (\horizdist,0) {cardbackprintable={Orange}};
-\pic () at (2\horizdist,0) {cardbackprintable={Orange}};
+\pic () at (0,0) {cardbackprintable={Regalia}};
+\pic () at (\horizdist,0) {cardbackprintable={Regalia}};
+\pic () at (2\horizdist,0) {cardbackprintable={Regalia}};
 
-\pic () at (0,-\vertdist) {cardbackprintable={Purple}};
-\pic () at (\horizdist,-\vertdist) {cardbackprintable={Purple}};
-\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Purple}};
+\pic () at (0,-\vertdist) {cardbackprintable={Arcanum}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Arcanum}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Arcanum}};
 
-\pic () at (0,-2\vertdist) {cardbackprintable={Brown}};
-\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Brown}};
-\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Brown}};
+\pic () at (0,-2\vertdist) {cardbackprintable={Country}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Country}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Country}};
 \end{tikzpicture}	
 \end{center}
 \newpage
-\phantom{a}
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
 \pic () at (0,0) {charactercardfrontprintable={crown}};
