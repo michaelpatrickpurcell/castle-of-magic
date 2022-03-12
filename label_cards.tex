@@ -18,10 +18,10 @@
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
 \definecolor{kidagold}{HTML}{FFD700}
+\definecolor{arcanumpurple}{HTML}{800080}
 
-\colorlet{Regalia}{Orange}
-\colorlet{Arcanum}{Purple}
-\colorlet{Country}{Brown}
+\colorlet{Arcanum}{dragongreen}
+\colorlet{Country}{Orange}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -49,6 +49,18 @@
 	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
 	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
 	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
+}}
+
+\tikzset{wolf/.pic={
+\node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf_gray.png}};
+}}
+
+\tikzset{eagle/.pic={
+\node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle_brown.png}};
+}}
+
+\tikzset{dragon/.pic={
+\node () at (0,0) {\includegraphics[scale=1.5]{Images/dragon_purple.png}};
 }}
 
 \tikzset{crown/.pic={
@@ -128,9 +140,9 @@
 \setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {cardbackprintable={Regalia}};
-\pic () at (\horizdist,0) {cardbackprintable={Regalia}};
-\pic () at (2\horizdist,0) {cardbackprintable={Regalia}};
+\pic () at (0,0) {cardbackprintable={Arcanum}};
+\pic () at (\horizdist,0) {cardbackprintable={Arcanum}};
+\pic () at (2\horizdist,0) {cardbackprintable={Arcanum}};
 
 \pic () at (0,-\vertdist) {cardbackprintable={Arcanum}};
 \pic () at (\horizdist,-\vertdist) {cardbackprintable={Arcanum}};
@@ -145,9 +157,9 @@
 \setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
-\pic () at (0,0) {charactercardfrontprintable={crown}};
-\pic () at (\horizdist, 0) {charactercardfrontprintable={orb}};
-\pic () at (2\horizdist, 0) {charactercardfrontprintable={mace}};
+\pic () at (0,0) {charactercardfrontprintable={bell}};
+\pic () at (\horizdist, 0) {charactercardfrontprintable={book}};
+\pic () at (2\horizdist, 0) {charactercardfrontprintable={candle}};
 
 \pic () at (0, -\vertdist) {charactercardfrontprintable={bell}};
 \pic () at (\horizdist, -\vertdist) {charactercardfrontprintable={book}};

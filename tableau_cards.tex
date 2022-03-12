@@ -74,22 +74,34 @@
 %	      cycle;
 	% Pattern for card back
 	\pic () at (0,0) {cardbackpattern={#1}};
-%	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}};
+	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}};
 	% Cutting guides for corners of the cards	
 %	\pic () at (0,0) {cutguide};
 \end{scope}
 }}
 
 \tikzset{wolf/.pic={
-\node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf.png}};
+\node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf_gray.png}};
 }}
 
 \tikzset{eagle/.pic={
-\node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle.png}};
+\node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle_brown.png}};
 }}
 
-\tikzset{dragon/.pic={
-\node () at (0,0) {\includegraphics[scale=1.5]{Images/dragon.png}};
+\tikzset{seahorse/.pic={
+\node[yshift=0.2cm] () at (0,0) {\includegraphics[scale=3.10]{Images/seahorse.png}};%1.5]{Images/seahorse.png}};
+}}
+
+\tikzset{crown/.pic={
+\node[transform shape, rotate=0] () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
+}}
+
+\tikzset{orb/.pic={
+\node[transform shape, rotate=0] () at (0,0) {\includegraphics[scale=0.575]{Images/orb.png}};
+}}
+
+\tikzset{scepter/.pic={
+\node[transform shape, rotate=-22.5] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
 }}
 
 \tikzset{tableaucardfrontprintable/.pic={
@@ -128,17 +140,17 @@
 \setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {tableaucardfrontprintable={dragon}};
-\pic () at (\horizdist, 0) {tableaucardfrontprintable={dragon}};
-\pic () at (2\horizdist, 0) {tableaucardfrontprintable={dragon}};
+\pic () at (0,0) {tableaucardfrontprintable={seahorse}};
+\pic () at (\horizdist, 0) {tableaucardfrontprintable={seahorse}};
+\pic () at (2\horizdist, 0) {tableaucardfrontprintable={seahorse}};
 
-\pic () at (0, -\vertdist) {tableaucardfrontprintable={dragon}};
-\pic () at (\horizdist, -\vertdist) {tableaucardfrontprintable={dragon}};
-\pic () at (2\horizdist, -\vertdist) {tableaucardfrontprintable={dragon}};
+\pic () at (0, -\vertdist) {tableaucardfrontprintable={seahorse}};
+\pic () at (\horizdist, -\vertdist) {tableaucardfrontprintable={crown}};
+\pic () at (2\horizdist, -\vertdist) {tableaucardfrontprintable={seahorse}};
 
-\pic () at (0, -2\vertdist) {tableaucardfrontprintable={dragon}};
-\pic () at (\horizdist, -2\vertdist) {tableaucardfrontprintable={dragon}};
-\pic () at (2\horizdist, -2\vertdist) {tableaucardfrontprintable={dragon}};
+\pic () at (0, -2\vertdist) {tableaucardfrontprintable={seahorse}};
+\pic () at (\horizdist, -2\vertdist) {tableaucardfrontprintable={seahorse}};
+\pic () at (2\horizdist, -2\vertdist) {tableaucardfrontprintable={seahorse}};
 \end{tikzpicture}	
 \end{center}
 \newpage
@@ -167,7 +179,7 @@
 \pic () at (2\horizdist, 0) {tableaucardfrontprintable={eagle}};
 
 \pic () at (0, -\vertdist) {tableaucardfrontprintable={eagle}};
-\pic () at (\horizdist, -\vertdist) {tableaucardfrontprintable={eagle}};
+\pic () at (\horizdist, -\vertdist) {tableaucardfrontprintable={orb}};
 \pic () at (2\horizdist, -\vertdist) {tableaucardfrontprintable={eagle}};
 
 \pic () at (0, -2\vertdist) {tableaucardfrontprintable={eagle}};
@@ -201,7 +213,7 @@
 \pic () at (2\horizdist, 0) {tableaucardfrontprintable={wolf}};
 
 \pic () at (0, -\vertdist) {tableaucardfrontprintable={wolf}};
-\pic () at (\horizdist, -\vertdist) {tableaucardfrontprintable={wolf}};
+\pic () at (\horizdist, -\vertdist) {tableaucardfrontprintable={scepter}};
 \pic () at (2\horizdist, -\vertdist) {tableaucardfrontprintable={wolf}};
 
 \pic () at (0, -2\vertdist) {tableaucardfrontprintable={wolf}};
