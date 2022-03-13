@@ -29,10 +29,14 @@
 }}
 
 \tikzset{seahorse/.pic={
-\node () at (0,0) {\includegraphics[scale=3.1]{Images/seahorse.png}};%1.5]{Images/dragon.png}};
+\node () at (0,0) {\includegraphics[scale=3.1]{Images/seahorse.png}};
 }}
 
-\input{coats_of_Arms}
+\tikzset{hydra/.pic={
+\node () at (0,0) {\includegraphics[scale=2.0]{Images/hydra.png}};
+}}
+
+\input{coats_of_arms}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -172,192 +176,46 @@
 \pic () at (2\horizdist, -2\vertdist) {cutguide};
 \pic[rotate=90, yscale=1.0, xscale=1.25, yshift=0cm] () at (2\horizdist, -2\vertdist) {eagle};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-5.65cm] () at (2\horizdist,-2\vertdist) {coa={Sorrell}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardbackprintable={Character}};
+\pic () at (\horizdist,0) {cardbackprintable={Character}};
+\pic () at (2\horizdist,0) {cardbackprintable={Character}};
+
+\pic () at (0,-\vertdist) {cardbackprintable={Character}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Character}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Character}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable={Character}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Character}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Character}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in, transform shape]
+\pic () at (0, 0) {cutguide};
+\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Hydra}};
+\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
+\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
+
+\pic () at (\horizdist, 0) {cutguide};
+\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist, 0) {coa={Hydra}};
+\pic[rotate=90, scale=0.66, xshift=3.3cm] () at (\horizdist, 0) {wolf};
+\pic[xscale=-1, scale=0.66, rotate=-90, xshift=3.3cm] () at (\horizdist, 0) {wolf}; 
+
+\pic () at (2\horizdist, 0) {cutguide};
+\pic[rotate=90, yscale=1.0, xscale=1.25, yshift=0cm] () at (2\horizdist, 0) {eagle};
+\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-5.65cm] () at (2\horizdist, 0) {coa={Hydra}};
+
+\pic () at (\horizdist, -\vertdist) {cutguide};
+\pic[rotate=90] () at (\horizdist, -\vertdist) {hydra};
 
 \end{tikzpicture}	
 \end{center}
-%\newpage
-%\setmainfont[Scale=1.0]{Cinzel}\phantom{a}
-%\begin{center}
-%\begin{tikzpicture}[x=1in, y=1in]
-%\pic () at (0,0) {charactercardfrontprintable};
-%\node[rotate=90] () at (0,0) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
-%Winner & Crown & Orb & Scepter \\ \midrule
-%Dragon & $2$ & $2$ & $2$\\
-%Eagle & $1$ & $1$ & $1$ \\
-%Wolf & $-$ & $-$ & $-$
-%\end{tabular}
-%};
-%\pic () at (\horizdist, 0) {charactercardfrontprintable};
-%\node[rotate=90] () at (\horizdist, 0) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
-%Winner & Crown & Orb & Scepter \\ \midrule
-%Dragon & $2$ & $2$ & $2$ \\
-%Eagle & $-$ & $-$ & $-$ \\
-%Wolf & $1$ & $1$ & $1$
-%\end{tabular}
-%};
-%\pic () at (2\horizdist, 0) {charactercardfrontprintable};
-%\node[rotate=90] () at (2\horizdist, 0) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
-%Winner & Crown & Orb & Scepter \\ \midrule
-%Dragon & $-$ & $-$ & $-$ \\
-%Eagle & $2$ & $2$ & $2$ \\
-%Wolf & $1$ & $1$ & $1$
-%\end{tabular}
-%};
-%
-%\pic () at (0,-\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (0,-\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
-%Winner & Crown & Orb & Scepter \\ \midrule
-%Dragon & $1$ & $1$ & $1$\\
-%Eagle & $2$ & $2$ & $2$ \\
-%Wolf & $-$ & $-$ & $-$
-%\end{tabular}
-%};
-%\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (\horizdist, -\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
-%Winner & Crown & Orb & Scepter \\ \midrule
-%Dragon & $1$ & $1$ & $1$\\
-%Eagle & $-$ & $-$ & $-$ \\
-%Wolf & $2$ & $2$ & $2$
-%\end{tabular}
-%};
-%\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (2\horizdist, -\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Regalia} \\ \cmidrule(l){2-4}
-%%& & & \\ %\toprule
-%Winner & Crown & Orb & Scepter \\ \midrule
-%Dragon & $-$ & $-$ & $-$ \\
-%Eagle & $1$ & $1$ & $1$ \\
-%Wolf & $2$ & $2$ & $2$
-%\end{tabular}
-%};
-%
-%\pic () at (0,-2\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (0,-2\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Arcanum} \\ \cmidrule(l){2-4}
-%Winner & Bell & Book & Candle \\ \midrule
-%Chaos & $2$ & $-$ & $-$\\
-%Order & $-$ & $2$ & $2$
-%\end{tabular}
-%};
-%\pic () at (\horizdist, -2\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (\horizdist, -2\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Arcanum} \\ \cmidrule(l){2-4}
-%Winner & Bell & Book & Candle \\ \midrule
-%Chaos & $-$ & $2$ & $-$\\
-%Order & $2$ & $-$ & $2$
-%\end{tabular}
-%};
-%\pic () at (2\horizdist, -2\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (2\horizdist, -2\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Arcanum} \\ \cmidrule(l){2-4}
-%Winner & Bell & Book & Candle \\ \midrule
-%Chaos & $-$ & $-$ & $2$ \\
-%Order & $2$ & $2$ & $-$
-%\end{tabular}
-%};
-%\end{tikzpicture}	
-%\end{center}
-%\newpage
-%\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
-%\begin{center}
-%\begin{tikzpicture}[x=1in, y=1in]
-%\pic () at (0,0) {cardbackprintable={Ritual}};
-%\pic () at (\horizdist,0) {cardbackprintable={Ritual}};
-%\pic () at (2\horizdist,0) {cardbackprintable={Ritual}};
-%
-%\pic () at (0,-\vertdist) {cardbackprintable={Intrigue}};
-%\pic () at (\horizdist,-\vertdist) {cardbackprintable={Intrigue}};
-%\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Intrigue}};
-%
-%\pic () at (0,-2\vertdist) {cardbackprintable={Intrigue}};
-%\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Intrigue}};
-%\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Intrigue}};
-%
-%\end{tikzpicture}	
-%\end{center}
-%\newpage
-%\setmainfont[Scale=1.0]{Cinzel}\phantom{a}
-%\begin{center}
-%\begin{tikzpicture}[x=1in, y=1in]
-%\pic () at (0,-0\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (0,-0\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Arcanum} \\ \cmidrule(l){2-4}
-%Winner & Bell & Book & Candle \\ \midrule
-%Chaos & $-$ & $2$ & $2$\\
-%Order & $2$ & $-$ & $-$
-%\end{tabular}
-%};
-%\pic () at (\horizdist, -0\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (\horizdist, -0\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Arcanum} \\ \cmidrule(l){2-4}
-%Winner & Bell & Book & Candle \\ \midrule
-%Chaos & $2$ & $-$ & $2$\\
-%Order & $-$ & $2$ & $-$
-%\end{tabular}
-%};
-%\pic () at (2\horizdist, -0\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (2\horizdist, -0\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Arcanum} \\ \cmidrule(l){2-4}
-%Winner & Bell & Book & Candle \\ \midrule
-%Chaos & $2$ & $2$ & $-$ \\
-%Order & $-$ & $-$ & $2$
-%\end{tabular}
-%};
-%
-%\pic () at (0, -\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (0,-\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Country} \\ \cmidrule(l){2-4}
-%Winner & Kida & Marus & Sorrell \\ \midrule
-%Peace & $1$ & $-$ & $-$\\
-%War & $-$ & $1$ & $1$ \\
-%\end{tabular}
-%};
-%\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (\horizdist,-\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Country} \\ \cmidrule(l){2-4}
-%Winner & Kida & Marus & Sorrell \\ \midrule
-%Peace & $-$ & $1$ & $-$\\
-%War & $1$ & $-$ & $1$ \\
-%\end{tabular}
-%};
-%\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (2\horizdist,-\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Country} \\ \cmidrule(l){2-4}
-%Winner & Kida & Marus & Sorrell \\ \midrule
-%Peace & $-$ & $-$ & $1$\\
-%War & $1$ & $1$ & $-$ \\
-%\end{tabular}
-%};
-%
-%\pic () at (0, -2\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (0,-2\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Country} \\ \cmidrule(l){2-4}
-%Winner & Kida & Marus & Sorrell \\ \midrule
-%Peace & $-$ & $1$ & $1$\\
-%War & $1$ & $-$ & $-$ \\
-%\end{tabular}
-%};
-%\pic () at (\horizdist, -2\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (\horizdist,-2\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Country} \\ \cmidrule(l){2-4}
-%Winner & Kida & Marus & Sorrell \\ \midrule
-%Peace & $1$ & $-$ & $1$\\
-%War & $-$ & $1$ & $-$ \\
-%\end{tabular}
-%};
-%\pic () at (2\horizdist, -2\vertdist) {charactercardfrontprintable};
-%\node[rotate=90] () at (2\horizdist,-2\vertdist) {\begin{tabular}{l c c c}
-%& \multicolumn{3}{c}{Country} \\ \cmidrule(l){2-4}
-%Winner & Kida & Marus & Sorrell \\ \midrule
-%Peace & $1$ & $1$ & $-$\\
-%War & $-$ & $-$ & $1$ \\
-%\end{tabular}
-%};
-%\end{tikzpicture}	
-%\end{center}
 \end{document}
