@@ -22,6 +22,7 @@
 
 \colorlet{Arcanum}{dragongreen}
 \colorlet{Country}{Orange}
+\colorlet{Outcome}{wolfblue}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -76,15 +77,37 @@
 }}
 
 \tikzset{bell/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
+\node[transform shape, rotate=90] () at (0,#1) {\includegraphics[scale=1.15]{Images/bell.png}};
 }}
 
 \tikzset{book/.pic={
-\node[transform shape, rotate=180] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
+\node[transform shape, rotate=180] () at (0,#1) {\includegraphics[scale=0.5]{Images/book.png}};
 }}
 
 \tikzset{candle/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
+\node[transform shape, rotate=90] () at (0,#1) {\includegraphics[scale=0.4]{Images/candle.png}};
+}}
+
+\tikzset{small_bell/.pic={
+\node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
+}}
+
+\tikzset{small_book/.pic={
+\node[transform shape, rotate=180, scale=0.33] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
+}}
+
+\tikzset{small_candle/.pic={
+\node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
+}}
+
+\tikzset{off/.pic={
+	\draw[line width=0.1cm] (-0.75cm, -0.75cm) -- (0.75cm, 0.75cm);
+	\draw[line width=0.1cm] (-0.75cm, 0.75cm) -- (0.75cm, -0.75cm); 
+}}
+
+\tikzset{big_off/.pic={
+	\draw[line width=0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
+	\draw[line width=0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm); 
 }}
 
 \tikzset{cardbackpattern/.pic={
@@ -157,13 +180,18 @@
 \setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
-\pic () at (0,0) {charactercardfrontprintable={bell}};
-\pic () at (\horizdist, 0) {charactercardfrontprintable={book}};
-\pic () at (2\horizdist, 0) {charactercardfrontprintable={candle}};
+\pic () at (0,0in) {charactercardfrontprintable={bell={0.0}}};
+\pic () at (\horizdist, 0) {charactercardfrontprintable={book={0.0}}};
+\pic () at (2\horizdist, 0) {charactercardfrontprintable={candle={0.0}}};
 
-\pic () at (0, -\vertdist) {charactercardfrontprintable={bell}};
-\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable={book}};
-\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle}};
+\pic () at (0, -\vertdist) {charactercardfrontprintable={bell={0.0}}};
+\pic () at (0, -\vertdist) {big_off};
+
+\pic () at (\horizdist, -\vertdist) {charactercardfrontprintable={book={0.0}}};
+\pic () at (\horizdist, -\vertdist) {big_off};
+
+\pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle={0.0}}};
+\pic () at (2\horizdist, -\vertdist) {big_off};
 
 \pic () at (0, -2\vertdist) {cutguide};
 \pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, -2\vertdist) {coa={Kida}};
@@ -171,6 +199,117 @@
 \pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist, -2\vertdist) {coa={Marus}};
 \pic () at (2\horizdist, -2\vertdist) {cutguide};
 \pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (2\horizdist, -2\vertdist) {coa={Sorrell}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in, transform shape]
+\pic () at (0,0) {cardbackprintable={Outcome}};
+\pic () at (\horizdist,0) {cardbackprintable={Outcome}};
+\pic () at (2\horizdist,0) {cardbackprintable={Outcome}};
+
+\pic () at (0,-\vertdist) {cardbackprintable={Outcome}};
+\pic () at (\horizdist,-\vertdist) {cardbackprintable={Outcome}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Outcome}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable={Outcome}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Outcome}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Outcome}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\setmainfont[Scale=1.0]{Cinzel}\phantom{a}\setmainfont[Scale=3.0]{Cinzel}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in, transform shape]
+\pic () at (0, 0) {cutguide};
+\pic () at (-0.75in, 1.25in) {small_bell};
+\pic () at (0in, 1.25in) {small_book};
+\pic () at (0in, 1.25in) {off};
+\pic () at (0.75in, 1.25in) {small_candle};
+\pic () at (0.75in, 1.25in) {off};
+\pic () at (-0.75in, -1.25in) {small_bell};
+\pic () at (0in, -1.25in) {small_book};
+\pic () at (0in, -1.25in) {off};
+\pic () at (0.75in, -1.25in) {small_candle};
+\pic () at (0.75in, -1.25in) {off};
+
+\pic () at (\horizdist, 0) {cutguide};
+\pic () at (-0.75in+\horizdist, 1.25in) {small_bell};
+\pic () at (-0.75in+\horizdist, 1.25in) {off};
+\pic () at (0in+\horizdist, 1.25in) {small_book};
+\pic () at (0.75in+\horizdist, 1.25in) {small_candle};
+\pic () at (0.75in+\horizdist, 1.25in) {off};
+\pic () at (-0.75in+\horizdist, -1.25in) {small_bell};
+\pic () at (-0.75in+\horizdist, -1.25in) {off};
+\pic () at (0in+\horizdist, -1.25in) {small_book};
+\pic () at (0.75in+\horizdist, -1.25in) {small_candle};
+\pic () at (0.75in+\horizdist, -1.25in) {off};
+
+\pic () at (2\horizdist, 0) {cutguide};
+\pic () at (-0.75in+2\horizdist, 1.25in) {small_bell};
+\pic () at (-0.75in+2\horizdist, 1.25in) {off};
+\pic () at (0in+2\horizdist, 1.25in) {small_book};
+\pic () at (0in+2\horizdist, 1.25in) {off};
+\pic () at (0.75in+2\horizdist, 1.25in) {small_candle};
+\pic () at (-0.75in+2\horizdist, -1.25in) {small_bell};
+\pic () at (-0.75in+2\horizdist, -1.25in) {off};
+\pic () at (0in+2\horizdist, -1.25in) {small_book};
+\pic () at (0in+2\horizdist, -1.25in) {off};
+\pic () at (0.75in+2\horizdist, -1.25in) {small_candle};
+
+\pic () at (0, -\vertdist) {cutguide};
+\pic () at (-0.75in, 1.25in-\vertdist) {small_bell};
+\pic () at (-0.75in, 1.25in-\vertdist) {off};
+\pic () at (0in, 1.25in-\vertdist) {small_book};
+\pic () at (0in, 1.25in-\vertdist) {off};
+\pic () at (0.75in, 1.25in-\vertdist) {small_candle};
+\pic () at (0.75in, 1.25in-\vertdist) {off};
+\pic () at (-0.75in, -1.25in-\vertdist) {small_bell};
+\pic () at (-0.75in, -1.25in-\vertdist) {off};
+\pic () at (0in, -1.25in-\vertdist) {small_book};
+\pic () at (0in, -1.25in-\vertdist) {off};
+\pic () at (0.75in, -1.25in-\vertdist) {small_candle};
+\pic () at (0.75in, -1.25in-\vertdist) {off};
+
+\pic () at (2\horizdist, -\vertdist) {cutguide};
+\pic () at (-0.75in+2\horizdist, 1.25in-\vertdist) {small_bell};
+\pic () at (0in+2\horizdist, 1.25in-\vertdist) {small_book};
+\pic () at (0.75in+2\horizdist, 1.25in-\vertdist) {small_candle};
+\pic () at (-0.75in+2\horizdist, -1.25in-\vertdist) {small_bell};
+\pic () at (0in+2\horizdist, -1.25in-\vertdist) {small_book};
+\pic () at (0.75in+2\horizdist, -1.25in-\vertdist) {small_candle};
+
+\pic () at (0, -2\vertdist) {cutguide};
+\pic () at (-0.75in, 1.25in-2\vertdist) {small_bell};
+\pic () at (0in, 1.25in-2\vertdist) {small_book};
+\pic () at (0.75in, 1.25in-2\vertdist) {small_candle};
+\pic () at (0.75in, 1.25in-2\vertdist) {off};
+\pic () at (-0.75in, -1.25in-2\vertdist) {small_bell};
+\pic () at (0in, -1.25in-2\vertdist) {small_book};
+\pic () at (0.75in, -1.25in-2\vertdist) {small_candle};
+\pic () at (0.75in, -1.25in-2\vertdist) {off};
+
+\pic () at (\horizdist, -2\vertdist) {cutguide};
+\pic () at (-0.75in+\horizdist, 1.25in-2\vertdist) {small_bell};
+\pic () at (-0.75in+\horizdist, 1.25in-2\vertdist) {off};
+\pic () at (0in+\horizdist, 1.25in-2\vertdist) {small_book};
+\pic () at (0.75in+\horizdist, 1.25in-2\vertdist) {small_candle};
+\pic () at (-0.75in+\horizdist, -1.25in-2\vertdist) {small_bell};
+\pic () at (-0.75in+\horizdist, -1.25in-2\vertdist) {off};
+\pic () at (0in+\horizdist, -1.25in-2\vertdist) {small_book};
+\pic () at (0.75in+\horizdist, -1.25in-2\vertdist) {small_candle};
+
+\pic () at (2\horizdist, -2\vertdist) {cutguide};
+\pic () at (-0.75in+2\horizdist, 1.25in-2\vertdist) {small_bell};
+\pic () at (0in+2\horizdist, 1.25in-2\vertdist) {small_book};
+\pic () at (0in+2\horizdist, 1.25in-2\vertdist) {off};
+\pic () at (0.75in+2\horizdist, 1.25in-2\vertdist) {small_candle};
+\pic () at (-0.75in+2\horizdist, -1.25in-2\vertdist) {small_bell};
+\pic () at (0in+2\horizdist, -1.25in-2\vertdist) {small_book};
+\pic () at (0in+2\horizdist, -1.25in-2\vertdist) {off};
+\pic () at (0.75in+2\horizdist, -1.25in-2\vertdist) {small_candle};
+
 \end{tikzpicture}	
 \end{center}
 \end{document}

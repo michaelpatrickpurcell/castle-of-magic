@@ -34,19 +34,23 @@
 }}
 
 \tikzset{hydra/.pic={
-\node () at (0,0) {\includegraphics[scale=3.0]{Images/hydra.png}};
+\node () at (0,0) {\includegraphics[scale=2.75]{Images/hydra.png}};
 }}
 
 \tikzset{crown/.pic={
-\node[transform shape] () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
+\node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
 }}
 
 \tikzset{orb/.pic={
-\node[transform shape] () at (0,0) {\includegraphics[scale=0.575]{Images/orb.png}};
+\node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=0.575]{Images/orb.png}};
 }}
 
 \tikzset{scepter/.pic={
-\node[transform shape, rotate=-22.5] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
+\node[transform shape, rotate=-22.5, scale=0.66] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
+}}
+
+\tikzset{laurel/.pic={
+\node[transform shape, scale=0.66] () at (0,0) {\includegraphics[scale=1.0]{Images/laurel.png}};
 }}
 
 \input{coats_of_Arms}
@@ -80,9 +84,10 @@
 }}
 
 \tikzset{dead/.pic={
-	\draw[fill=black, scale=0.8] (-1.25, 1.625) -- (1.125, -1.75) -- (1.25, -1.75) -- (1.25, -1.625) -- (-1.125, 1.75) -- (-1.25, 1.75) -- cycle;
-	\draw[fill=black, scale=0.8] (1.25, 1.625) -- (-1.125, -1.75) -- (-1.25, -1.75) -- (-1.25, -1.625) -- (1.125, 1.75) -- (1.25, 1.75) -- cycle;
-
+%	\draw[fill=black, scale=0.8] (-1.25, 1.625) -- (1.125, -1.75) -- (1.25, -1.75) -- (1.25, -1.625) -- (-1.125, 1.75) -- (-1.25, 1.75) -- cycle;
+%	\draw[fill=black, scale=0.8] (1.25, 1.625) -- (-1.125, -1.75) -- (-1.25, -1.75) -- (-1.25, -1.625) -- (1.125, 1.75) -- (1.25, 1.75) -- cycle;
+	\draw[line width = 0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
+	\draw[line width = 0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm);
 }}
 
 \tikzset{cardbackpattern/.pic={
@@ -151,9 +156,11 @@
 \pic () at (0,0) {hydra};
 
 \pic () at (\horizdist, 0) {cutguide};
+\pic () at (\horizdist, 0) {laurel};
 \pic () at (\horizdist, 0) {crown};
 
 \pic () at (2\horizdist, 0) {cutguide};
+\pic () at (2\horizdist, 0) {laurel};
 \pic () at (2\horizdist, 0) {orb};
 
 \pic () at (0,-\vertdist) {cutguide};
@@ -169,6 +176,7 @@
 \pic () at (2\horizdist,-\vertdist) {dead};
 
 \pic () at (0,-2\vertdist) {cutguide};
+\pic () at (0, -2\vertdist) {laurel};
 \pic () at (0,-2\vertdist) {scepter};
 
 \pic () at (\horizdist,-2\vertdist) {cutguide};
