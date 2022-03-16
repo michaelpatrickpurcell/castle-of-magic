@@ -45,6 +45,10 @@
 \node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=0.575]{Images/orb.png}};
 }}
 
+\tikzset{amulet/.pic={
+\node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=3.0]{Images/amulet.png}};
+}}
+
 \tikzset{scepter/.pic={
 \node[transform shape, rotate=-22.5, scale=0.66] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
 }}
@@ -161,7 +165,8 @@
 
 \pic () at (2\horizdist, 0) {cutguide};
 \pic () at (2\horizdist, 0) {laurel};
-\pic () at (2\horizdist, 0) {orb};
+%\pic () at (2\horizdist, 0) {orb};
+\pic () at (2\horizdist, 0) {amulet};
 
 \pic () at (0,-\vertdist) {cutguide};
 \pic () at (0,-\vertdist) {hydra};
@@ -172,7 +177,8 @@
 \pic () at (\horizdist,-\vertdist) {dead};
 
 \pic () at (2\horizdist, -\vertdist) {cutguide};
-\pic () at (2\horizdist, -\vertdist) {orb};
+%\pic () at (2\horizdist, -\vertdist) {orb};
+\pic () at (2\horizdist, -\vertdist) {amulet};
 \pic () at (2\horizdist,-\vertdist) {dead};
 
 \pic () at (0,-2\vertdist) {cutguide};

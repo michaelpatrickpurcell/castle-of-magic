@@ -28,6 +28,11 @@
 \node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle_brown.png}};
 }}
 
+\tikzset{dragon/.pic={
+\node () at (0,0) {\includegraphics[scale=1.5]{Images/dragon.png}};
+}}
+
+
 \tikzset{seahorse/.pic={
 \node () at (0,0) {\includegraphics[scale=3.1]{Images/seahorse.png}};
 }}
@@ -137,18 +142,24 @@
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
 \pic () at (0, 0) {cutguide};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Kida}};
-\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
-\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse}; 
+%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
+%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse}; 
+\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
+\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon}; 
 
 \pic () at (\horizdist, 0) {cutguide};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist,0) {coa={Marus}};
-\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {seahorse};
-\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {seahorse}; 
+%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {seahorse};
+%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {seahorse}; 
+\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {dragon};
+\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {dragon}; 
 
 \pic () at (2\horizdist, 0) {cutguide};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (2\horizdist,0) {coa={Sorrell}};
-\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {seahorse};
-\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {seahorse}; 
+%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {seahorse};
+%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {seahorse}; 
+\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {dragon};
+\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {dragon}; 
 
 \pic () at (0, -\vertdist) {cutguide};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,-\vertdist) {coa={Kida}};
@@ -201,8 +212,10 @@
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
 \pic () at (0, 0) {cutguide};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Hydra}};
-\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
-\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
+%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
+%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
+\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
+\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
 
 \pic () at (\horizdist, 0) {cutguide};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist, 0) {coa={Hydra}};
