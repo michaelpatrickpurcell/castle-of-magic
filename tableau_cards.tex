@@ -16,8 +16,11 @@
 \definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
 \definecolor{eaglered}{HTML}{A52A2A}
+\definecolor{hydrapurple}{HTML}{800080}
 
-\colorlet{Tableau}{black}
+\colorlet{Tableau}{hydrapurple}
+
+\input{coats_of_arms}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -34,6 +37,10 @@
 \setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
 \setlength{\vertspace}{0.0625in}
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
+
+\tikzset{castle/.pic={
+\node () at (0,0) {\includegraphics[scale=2.5]{Images/castle.png}};
+}}
 
 \tikzset{guidecross/.pic={
 	\draw (-\bleed,0) -- (\bleed,0);
@@ -73,11 +80,26 @@
 %	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 %	      cycle;
 	% Pattern for card back
-	\pic () at (0,0) {cardbackpattern={#1}};
-	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}};
+%	\pic () at (0,0) {cardbackpattern={#1}};
+%	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}};
+		\setmainfont[Scale=1.5]{TeX Gyre Chorus}
+\pic () at (0,0) {cardfill={#1}};
+\pic () at (0,0) {cutguide};
+\pic () at (0, 0.25in) {castle};
+\pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
+
 	% Cutting guides for corners of the cards	
 %	\pic () at (0,0) {cutguide};
 \end{scope}
+}}
+
+\tikzset{cardfill/.pic={
+	\path[fill=#1] (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
 }}
 
 \tikzset{wolf/.pic={

@@ -19,7 +19,7 @@
 
 \colorlet{Character}{Brown}
 \colorlet{Intrigue}{wolfblue}
-\colorlet{Ritual}{hydrapurple}
+\colorlet{Ritual}{dragongreen}
 
 \tikzset{wolf/.pic={
 \node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf_gray.png}};
@@ -49,6 +49,10 @@
 \node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=3.0]{Images/amulet.png}};
 }}
 
+\tikzset{castle/.pic={
+\node () at (0,0) {\includegraphics[scale=2.5]{Images/castle.png}};
+}}
+
 \tikzset{scepter/.pic={
 \node[transform shape, rotate=-22.5, scale=0.66] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
 }}
@@ -57,7 +61,7 @@
 \node[transform shape, scale=0.66] () at (0,0) {\includegraphics[scale=1.0]{Images/laurel.png}};
 }}
 
-\input{coats_of_Arms}
+\input{coats_of_arms}
 
 \newlength{\cardwidth}
 \newlength{\cardheight}
@@ -113,12 +117,26 @@
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
 	% Pattern for card back
-	\pic () at (0,0) {cardbackpattern={#1}};
-	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1\,}}}; 	
+%	\pic () at (0,0) {cardbackpattern={#1}};
+%	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1\,}}}; 	
+	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
+\pic () at (0,0) {cardfill={#1}};
+\pic () at (0,0) {cutguide};
+\pic () at (0, 0.25in) {castle};
+\pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
 
 	% Cutting guides for corners of the cards	
 %	\pic () at (0,0) {cutguide};
 \end{scope}
+}}
+
+\tikzset{cardfill/.pic={
+	\path[fill=#1] (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
 }}
 
 \tikzset{charactercardfrontprintable/.pic={
