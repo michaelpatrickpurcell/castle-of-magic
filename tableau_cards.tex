@@ -32,10 +32,10 @@
 
 \setlength{\cardwidth}{2.4in}
 \setlength{\cardheight}{3.4in}
-\setlength{\bleed}{0.0625in}
-\setlength{\horizspace}{0.0625in}
+\setlength{\bleed}{0.125in}%0625in}
+\setlength{\horizspace}{0.0in}%625in}
 \setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
-\setlength{\vertspace}{0.0625in}
+\setlength{\vertspace}{0.0in}%625in}
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
 \tikzset{castle/.pic={
@@ -84,7 +84,7 @@
 %	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}};
 		\setmainfont[Scale=1.5]{TeX Gyre Chorus}
 \pic () at (0,0) {cardfill={#1}};
-%\pic () at (0,0) {cutguide};
+\pic () at (0,0) {cutguide};
 \pic () at (0, 0.25in) {castle};
 \pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
 
@@ -146,7 +146,7 @@
 	% Pattern for card front
 	\pic () at (0,0) {#1};
 	% Cutting guides for corners of the cards	
-	\pic () at (0,0) {cutguide};
+%	\pic () at (0,0) {cutguide};
 \end{scope}
 }}
 

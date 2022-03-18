@@ -35,10 +35,10 @@
 
 \setlength{\cardwidth}{2.4in}
 \setlength{\cardheight}{3.4in}
-\setlength{\bleed}{0.0625in}
-\setlength{\horizspace}{0.0625in}
+\setlength{\bleed}{0.125in}%0625in}
+\setlength{\horizspace}{0.0in}%625in}
 \setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
-\setlength{\vertspace}{0.0625in}
+\setlength{\vertspace}{0.0in}%625in}
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
 \tikzset{guidecross/.pic={
@@ -145,7 +145,7 @@
 	
 	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
 \pic () at (0,0) {cardfill={#1}};
-%\pic () at (0,0) {cutguide};
+\pic () at (0,0) {cutguide};
 \pic () at (0, 0.25in) {castle};
 \pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
 
@@ -174,7 +174,7 @@
 	% Pattern for card front
 	\pic () at (0,0) {#1};
 	% Cutting guides for corners of the cards	
-	\pic () at (0,0) {cutguide};
+%	\pic () at (0,0) {cutguide};
 \end{scope}
 }}
 
@@ -214,11 +214,11 @@
 \pic () at (2\horizdist, -\vertdist) {charactercardfrontprintable={candle={0.0}}};
 \pic () at (2\horizdist, -\vertdist) {big_off};
 
-\pic () at (0, -2\vertdist) {cutguide};
+%\pic () at (0, -2\vertdist) {cutguide};
 \pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, -2\vertdist) {coa={Kida}};
-\pic () at (\horizdist, -2\vertdist) {cutguide};
+%\pic () at (\horizdist, -2\vertdist) {cutguide};
 \pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist, -2\vertdist) {coa={Marus}};
-\pic () at (2\horizdist, -2\vertdist) {cutguide};
+%\pic () at (2\horizdist, -2\vertdist) {cutguide};
 \pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (2\horizdist, -2\vertdist) {coa={Sorrell}};
 \end{tikzpicture}	
 \end{center}
@@ -243,7 +243,7 @@
 \setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
-\pic () at (0, 0) {cutguide};
+%\pic () at (0, 0) {cutguide};
 \pic () at (-0.75in, 1.25in) {small_bell};
 \pic () at (0in, 1.25in) {small_book};
 \pic () at (0in, 1.25in) {off};
@@ -255,7 +255,7 @@
 \pic () at (0.75in, -1.25in) {small_candle};
 \pic () at (0.75in, -1.25in) {off};
 
-\pic () at (\horizdist, 0) {cutguide};
+%\pic () at (\horizdist, 0) {cutguide};
 \pic () at (-0.75in+\horizdist, 1.25in) {small_bell};
 \pic () at (-0.75in+\horizdist, 1.25in) {off};
 \pic () at (0in+\horizdist, 1.25in) {small_book};
@@ -267,7 +267,7 @@
 \pic () at (0.75in+\horizdist, -1.25in) {small_candle};
 \pic () at (0.75in+\horizdist, -1.25in) {off};
 
-\pic () at (2\horizdist, 0) {cutguide};
+%\pic () at (2\horizdist, 0) {cutguide};
 \pic () at (-0.75in+2\horizdist, 1.25in) {small_bell};
 \pic () at (-0.75in+2\horizdist, 1.25in) {off};
 \pic () at (0in+2\horizdist, 1.25in) {small_book};
@@ -279,7 +279,7 @@
 \pic () at (0in+2\horizdist, -1.25in) {off};
 \pic () at (0.75in+2\horizdist, -1.25in) {small_candle};
 
-\pic () at (0, -\vertdist) {cutguide};
+%\pic () at (0, -\vertdist) {cutguide};
 \pic () at (-0.75in, 1.25in-\vertdist) {small_bell};
 \pic () at (-0.75in, 1.25in-\vertdist) {off};
 \pic () at (0in, 1.25in-\vertdist) {small_book};
@@ -293,7 +293,7 @@
 \pic () at (0.75in, -1.25in-\vertdist) {small_candle};
 \pic () at (0.75in, -1.25in-\vertdist) {off};
 
-\pic () at (2\horizdist, -\vertdist) {cutguide};
+%\pic () at (2\horizdist, -\vertdist) {cutguide};
 \pic () at (-0.75in+2\horizdist, 1.25in-\vertdist) {small_bell};
 \pic () at (0in+2\horizdist, 1.25in-\vertdist) {small_book};
 \pic () at (0.75in+2\horizdist, 1.25in-\vertdist) {small_candle};
@@ -301,7 +301,7 @@
 \pic () at (0in+2\horizdist, -1.25in-\vertdist) {small_book};
 \pic () at (0.75in+2\horizdist, -1.25in-\vertdist) {small_candle};
 
-\pic () at (0, -2\vertdist) {cutguide};
+%\pic () at (0, -2\vertdist) {cutguide};
 \pic () at (-0.75in, 1.25in-2\vertdist) {small_bell};
 \pic () at (0in, 1.25in-2\vertdist) {small_book};
 \pic () at (0.75in, 1.25in-2\vertdist) {small_candle};
@@ -311,7 +311,7 @@
 \pic () at (0.75in, -1.25in-2\vertdist) {small_candle};
 \pic () at (0.75in, -1.25in-2\vertdist) {off};
 
-\pic () at (\horizdist, -2\vertdist) {cutguide};
+%\pic () at (\horizdist, -2\vertdist) {cutguide};
 \pic () at (-0.75in+\horizdist, 1.25in-2\vertdist) {small_bell};
 \pic () at (-0.75in+\horizdist, 1.25in-2\vertdist) {off};
 \pic () at (0in+\horizdist, 1.25in-2\vertdist) {small_book};
@@ -321,7 +321,7 @@
 \pic () at (0in+\horizdist, -1.25in-2\vertdist) {small_book};
 \pic () at (0.75in+\horizdist, -1.25in-2\vertdist) {small_candle};
 
-\pic () at (2\horizdist, -2\vertdist) {cutguide};
+%\pic () at (2\horizdist, -2\vertdist) {cutguide};
 \pic () at (-0.75in+2\horizdist, 1.25in-2\vertdist) {small_bell};
 \pic () at (0in+2\horizdist, 1.25in-2\vertdist) {small_book};
 \pic () at (0in+2\horizdist, 1.25in-2\vertdist) {off};
