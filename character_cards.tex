@@ -65,27 +65,17 @@
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
 \tikzset{guidecross/.pic={
-	\draw (-\bleed,0) -- (\bleed,0);
-	\draw (0, -\bleed) -- (0, \bleed);
+	\draw[#1] (-\bleed,0) -- (\bleed,0);
+	\draw[#1] (0, -\bleed) -- (0, \bleed);
 }}
 
 \tikzset{cutguide/.pic={
-	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross={#1}};
 }}
 
-
-\tikzset{cardbackpattern/.pic={
-	\foreach \i in {-1.25, -1.0,...,1.25}
-		\foreach \j in {-1.75, -1.5, ..., 1.75}
-			\draw[very thick, #1] (\i,\j) circle (0.105);
-
-	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
-		\foreach \j in {-1.875, -1.625, ..., 1.875}
-			\draw[very thick, #1] (\i,\j) circle (0.105);
-}}
 
 \tikzset{cardbackprintable/.pic={
 	\begin{scope}
@@ -95,23 +85,11 @@
 	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
-%	\path[fill=lightgray] (-\cardwidth/2 - \bleed, 0in) --%
-%	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
-%	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
-%	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
-%	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
-%	      cycle;
-	% Pattern for card back
-%	\pic () at (0,0) {cardbackpattern={#1}};
-%	\node[transform shape, rotate=-90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1}}}; 	
 \setmainfont[Scale=1.5]{TeX Gyre Chorus}
 \pic () at (0,0) {cardfill={#1}};
-\pic () at (0,0) {cutguide};
+\pic () at (0,0) {cutguide={black}};
 \pic () at (0, 0.25in) {castle};
 \pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
-
-	% Cutting guides for corners of the cards	
-%	\pic () at (0,0) {cutguide};
 \end{scope}
 }}
 
@@ -133,7 +111,7 @@
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
 	% Cutting guides for corners of the cards	
-%	\pic () at (0,0) {cutguide};
+	\pic () at (0,0) {cutguide={white}};
 \end{scope}
 }}
 
@@ -159,51 +137,45 @@
 \setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
-%\pic () at (0, 0) {cutguide};
+\pic () at (0, 0) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Kida}};
-%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
-%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse}; 
 \pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon}; 
 
-%\pic () at (\horizdist, 0) {cutguide};
+\pic () at (\horizdist, 0) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist,0) {coa={Marus}};
-%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {seahorse};
-%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {seahorse}; 
 \pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {dragon};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (\horizdist,0) {dragon}; 
 
-%\pic () at (2\horizdist, 0) {cutguide};
+\pic () at (2\horizdist, 0) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (2\horizdist,0) {coa={Sorrell}};
-%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {seahorse};
-%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {seahorse}; 
 \pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {dragon};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (2\horizdist,0) {dragon}; 
 
-%\pic () at (0, -\vertdist) {cutguide};
+\pic () at (0, -\vertdist) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,-\vertdist) {coa={Kida}};
 \pic[rotate=90, scale=0.66, xshift=3.3cm] () at (0, -\vertdist) {wolf};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=3.3cm] () at (0, -\vertdist) {wolf}; 
 
-%\pic () at (\horizdist, -\vertdist) {cutguide};
+\pic () at (\horizdist, -\vertdist) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist,-\vertdist) {coa={Marus}};
 \pic[rotate=90, scale=0.66, xshift=3.3cm] () at (\horizdist, -\vertdist) {wolf};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=3.3cm] () at (\horizdist, -\vertdist) {wolf}; 
 
-%\pic () at (2\horizdist, -\vertdist) {cutguide};
+\pic () at (2\horizdist, -\vertdist) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (2\horizdist,-\vertdist) {coa={Sorrell}};
 \pic[rotate=90, scale=0.66, xshift=3.3cm] () at (2\horizdist, -\vertdist) {wolf};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=3.3cm] () at (2\horizdist, -\vertdist) {wolf}; 
 
-%\pic () at (0, -2\vertdist) {cutguide};
+\pic () at (0, -2\vertdist) {cutguide={white}};
 \pic[rotate=90, yscale=1.0, xscale=1.25, yshift=0cm] () at (0, -2\vertdist) {eagle};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-5.65cm] () at (0,-2\vertdist) {coa={Kida}};
 
-%\pic () at (\horizdist, -2\vertdist) {cutguide};
+\pic () at (\horizdist, -2\vertdist) {cutguide={white}};
 \pic[rotate=90, yscale=1.0, xscale=1.25, yshift=0cm] () at (\horizdist, -2\vertdist) {eagle};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-5.65cm] () at (\horizdist,-2\vertdist) {coa={Marus}};
 
-%\pic () at (2\horizdist, -2\vertdist) {cutguide};
+\pic () at (2\horizdist, -2\vertdist) {cutguide={white}};
 \pic[rotate=90, yscale=1.0, xscale=1.25, yshift=0cm] () at (2\horizdist, -2\vertdist) {eagle};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-5.65cm] () at (2\horizdist,-2\vertdist) {coa={Sorrell}};
 \end{tikzpicture}	
@@ -216,36 +188,29 @@
 \pic () at (\horizdist,0) {cardbackprintable={Character}};
 \pic () at (2\horizdist,0) {cardbackprintable={Character}};
 
-%\pic () at (0,-\vertdist) {cardbackprintable={Character}};
 \pic () at (\horizdist,-\vertdist) {cardbackprintable={Character}};
-%\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Character}};
 
-%\pic () at (0,-2\vertdist) {cardbackprintable={Character}};
-%\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Character}};
-%\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Character}};
 \end{tikzpicture}	
 \end{center}
 \newpage
 \setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
-%\pic () at (0, 0) {cutguide};
+\pic () at (0, 0) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Monster}};
-%\pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
-%\pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {seahorse};
 \pic[rotate=90, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
 
-%\pic () at (\horizdist, 0) {cutguide};
+\pic () at (\horizdist, 0) {cutguide={white}};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (\horizdist, 0) {coa={Monster}};
 \pic[rotate=90, scale=0.66, xshift=3.3cm] () at (\horizdist, 0) {wolf};
 \pic[xscale=-1, scale=0.66, rotate=-90, xshift=3.3cm] () at (\horizdist, 0) {wolf}; 
 
-%\pic () at (2\horizdist, 0) {cutguide};
+\pic () at (2\horizdist, 0) {cutguide={white}};
 \pic[rotate=90, yscale=1.0, xscale=1.25, yshift=0cm] () at (2\horizdist, 0) {eagle};
 \pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-5.65cm] () at (2\horizdist, 0) {coa={Monster}};
 
-%\pic () at (\horizdist, -\vertdist) {cutguide};
+\pic () at (\horizdist, -\vertdist) {cutguide={white}};
 \pic[rotate=90] () at (\horizdist, -\vertdist) {hydra};
 
 \end{tikzpicture}	

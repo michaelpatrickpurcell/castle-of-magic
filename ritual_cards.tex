@@ -12,41 +12,44 @@
 \contournumber{256}
 \contourlength{0.1cm}
 
-\definecolor{wolfblue}{HTML}{0038A8}
 \definecolor{dragongreen}{HTML}{008000}
-\definecolor{eaglered}{HTML}{A52A2A}
-\definecolor{hydrapurple}{HTML}{800080}
-
-\colorlet{Character}{Brown}
-\colorlet{Intrigue}{wolfblue}
 \colorlet{Ritual}{dragongreen}
-
-\tikzset{wolf/.pic={
-\node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf_gray.png}};
-}}
-
-\tikzset{eagle/.pic={
-\node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle_brown.png}};
-}}
-
-\tikzset{seahorse/.pic={
-\node () at (0,0) {\includegraphics[scale=3.1]{Images/seahorse.png}};
-}}
 
 \tikzset{hydra/.pic={
 \node () at (0,0) {\includegraphics[scale=2.75]{Images/hydra.png}};
+}}
+
+\tikzset{hydra_dead/.pic={
+\node () at (0,0) {\includegraphics[scale=2.75]{Images/hydra.png}};
+\pic () at (0, 0) {dead};
 }}
 
 \tikzset{crown/.pic={
 \node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
 }}
 
-\tikzset{orb/.pic={
-\node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=0.575]{Images/orb.png}};
+\tikzset{crown_laurel/.pic={
+\pic () at (0, 0) {laurel};
+\pic () at (0, 0) {crown};
+}}
+
+\tikzset{crown_dead/.pic={
+\pic () at (0, 0) {laurel};
+\pic () at (0, 0) {crown};
 }}
 
 \tikzset{amulet/.pic={
 \node[transform shape, scale=0.75] () at (0,0) {\includegraphics[scale=3.0]{Images/amulet.png}};
+}}
+
+\tikzset{amulet_laurel/.pic={
+\pic () at (0, 0) {laurel};
+\pic () at (0, 0) {amulet};
+}}
+
+\tikzset{amulet_dead/.pic={
+\pic () at (0, 0) {amulet};
+\pic () at (0, 0) {dead};
 }}
 
 \tikzset{castle/.pic={
@@ -55,6 +58,16 @@
 
 \tikzset{scepter/.pic={
 \node[transform shape, rotate=-22.5, scale=0.66] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
+}}
+
+\tikzset{scepter_laurel/.pic={
+\pic () at (0, 0) {laurel};
+\pic () at (0, 0) {scepter};
+}}
+
+\tikzset{scepter_dead/.pic={
+\pic () at (0, 0) {scepter};
+\pic () at (0, 0) {dead};
 }}
 
 \tikzset{laurel/.pic={
@@ -80,32 +93,20 @@
 \setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
 
 \tikzset{guidecross/.pic={
-	\draw (-\bleed,0) -- (\bleed,0);
-	\draw (0, -\bleed) -- (0, \bleed);
+	\draw[#1] (-\bleed,0) -- (\bleed,0);
+	\draw[#1] (0, -\bleed) -- (0, \bleed);
 }}
 
 \tikzset{cutguide/.pic={
-	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, \cardheight/2) {guidecross};
-	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross};
-	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross};
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross={#1}};
 }}
 
 \tikzset{dead/.pic={
-%	\draw[fill=black, scale=0.8] (-1.25, 1.625) -- (1.125, -1.75) -- (1.25, -1.75) -- (1.25, -1.625) -- (-1.125, 1.75) -- (-1.25, 1.75) -- cycle;
-%	\draw[fill=black, scale=0.8] (1.25, 1.625) -- (-1.125, -1.75) -- (-1.25, -1.75) -- (-1.25, -1.625) -- (1.125, 1.75) -- (1.25, 1.75) -- cycle;
 	\draw[line width = 0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
 	\draw[line width = 0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm);
-}}
-
-\tikzset{cardbackpattern/.pic={
-	\foreach \i in {-1.25, -1.0,...,1.25}
-		\foreach \j in {-1.75, -1.5, ..., 1.75}
-			\draw[very thick, #1] (\i,\j) circle (0.105);
-
-	\foreach \i in {-1.375, -1.125, -0.875,...,1.125, 1.375}
-		\foreach \j in {-1.875, -1.625, ..., 1.875}
-			\draw[very thick, #1] (\i,\j) circle (0.105);
 }}
 
 \tikzset{cardbackprintable/.pic={
@@ -117,16 +118,11 @@
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
 	% Pattern for card back
-%	\pic () at (0,0) {cardbackpattern={#1}};
-%	\node[transform shape, rotate=90, fill=White, fill opacity=1.0, text opacity=1.0, rounded corners=5mm] () at (0,0) {{\large\contour{White}{#1\,}}}; 	
 	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
 \pic () at (0,0) {cardfill={#1}};
-\pic () at (0,0) {cutguide};
+\pic () at (0,0) {cutguide={black}};
 \pic () at (0, 0.25in) {castle};
 \pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
-
-	% Cutting guides for corners of the cards	
-%	\pic () at (0,0) {cutguide};
 \end{scope}
 }}
 
@@ -139,7 +135,7 @@
 	      cycle;
 }}
 
-\tikzset{charactercardfrontprintable/.pic={
+\tikzset{ritualcardfrontprintable/.pic={
 	\begin{scope}
 	\clip (-\cardwidth/2 - \bleed, 0in) --%
 	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
@@ -148,7 +144,8 @@
 	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
 	      cycle;
 	% Cutting guides for corners of the cards	
-%	\pic () at (0,0) {cutguide};
+	\pic () at (0,0) {cutguide={white}};
+	\pic () at (0,0) {#1};
 \end{scope}
 }}
 
@@ -174,38 +171,16 @@
 \noindent\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-%\pic () at (0, 0) {cutguide};
-\pic () at (0,0) {hydra};
+\pic () at (0,0) {ritualcardfrontprintable={hydra}};
+\pic () at (\horizdist, 0) {ritualcardfrontprintable={crown_laurel}};
+\pic () at (2\horizdist, 0) {ritualcardfrontprintable={amulet_laurel}};
 
-%\pic () at (\horizdist, 0) {cutguide};
-\pic () at (\horizdist, 0) {laurel};
-\pic () at (\horizdist, 0) {crown};
+\pic () at (0,-\vertdist) {ritualcardfrontprintable={hydra_dead}};
+\pic () at (\horizdist, -\vertdist) {ritualcardfrontprintable={crown_dead}};
+\pic () at (2\horizdist,-\vertdist) {ritualcardfrontprintable={amulet_dead}};
 
-%\pic () at (2\horizdist, 0) {cutguide};
-\pic () at (2\horizdist, 0) {laurel};
-%\pic () at (2\horizdist, 0) {orb};
-\pic () at (2\horizdist, 0) {amulet};
-
-%\pic () at (0,-\vertdist) {cutguide};
-\pic () at (0,-\vertdist) {hydra};
-\pic () at (0,-\vertdist) {dead};
-
-%\pic () at (\horizdist, -\vertdist) {cutguide};
-\pic () at (\horizdist, -\vertdist) {crown};
-\pic () at (\horizdist,-\vertdist) {dead};
-
-%\pic () at (2\horizdist, -\vertdist) {cutguide};
-%\pic () at (2\horizdist, -\vertdist) {orb};
-\pic () at (2\horizdist, -\vertdist) {amulet};
-\pic () at (2\horizdist,-\vertdist) {dead};
-
-%\pic () at (0,-2\vertdist) {cutguide};
-\pic () at (0, -2\vertdist) {laurel};
-\pic () at (0,-2\vertdist) {scepter};
-
-%\pic () at (2\horizdist,-2\vertdist) {cutguide};
-\pic () at (2\horizdist,-2\vertdist) {scepter};
-\pic () at (2\horizdist,-2\vertdist) {dead};
+\pic () at (0,-2\vertdist) {ritualcardfrontprintable={scepter_laurel}};
+\pic () at (2\horizdist,-2\vertdist) {ritualcardfrontprintable={scepter_dead}};
 \end{tikzpicture}
 \end{center}
 \end{document}
