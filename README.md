@@ -14,9 +14,9 @@ As a result, the spell that binds the Monster has begun to falter.
 
 Now, wizards from the three factions have come together to harness the power of the shrines and try to banish the monster once and for all.
 If they succeed, their faction may be able to seize control of the kingdom.
-If they fail, they risk being devoured by the Monster as it rampages.
+If they fail, they risk releasing the Monster and being devoured as it rampages.
 
-## Overview
+<!-- ## Overview
 You will assume the role of a character who has a set of secret objectives.
 Some characters have objectives that are mutually compatible.
 Those characters are natural allies.
@@ -35,6 +35,29 @@ The game ends when all of these cards have been turned face up.
 
 You will score points for each objective that you accomplish. 
 You win if you score the most points.
+ -->
+## Overview
+You will assume the role of one of these wizards.
+You will have a set of secret objectives based on what faction you belong to and what country you are from.
+Other wizards from your faction will be your natural allies.
+Other wizards from your country will be your natural rivals.
+So, you will want to try to figure out what the other wizards' secret objectives are and adjust your strategy accordingly.
+
+To accomplish your secret objectives, you will manipulate the twenty-seven shrines.
+Each shrine is represented by a shrine card.
+These shrine cards are arranged in a tableau consisting of three rows of nine cards each.
+Each shrine card can be turned either face up or face down.
+On your turn you can flip one or two of the shrine cards, thereby changing the current state of the tableau.
+Whether you accomplish each of your secret objectives depends on the state of the tableau at the end of the game.
+
+The game ends when you cast the ritual spell.
+The nature of this spell is determined by the eight ritual cards.
+These cards start face down.
+On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
+The ritual spell is cast when all eight ritual cards have been turned face up.
+
+You will score 1000 points for each secret objective that you accomplish. 
+You win the game is you score the most points.
 
 ## Components
 - 54 Cards:
