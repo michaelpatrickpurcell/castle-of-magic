@@ -44,10 +44,10 @@ Other wizards from your country will be your natural rivals.
 So, you will want to try to figure out what the other wizards' secret objectives are and adjust your strategy accordingly.
 
 To accomplish your secret objectives, you will manipulate the twenty-seven shrines.
-Each shrine is represented by a shrine card.
-These shrine cards will be arranged in a tableau consisting of three rows of nine cards each.
-Each shrine card can be turned either face up or face down.
-On your turn you can flip one or two of the shrine cards, thereby changing the current state of the tableau.
+Each shrine will be represented by a shrine card.
+These shrine cards will be arranged in a tableau.
+Each shrine card can be turned either face up or face down to indicate if the corresponding shrine is active or inactive.
+On your turn you can flip one or two of the shrine cards, thereby changing the state of the tableau.
 Whether you accomplish each of your secret objectives will depend on the state of the tableau at the end of the game.
 
 The game will end when you cast the ritual spell.
