@@ -16,6 +16,20 @@ Now, wizards from the three factions have come together to harness the power of 
 If they succeed, their faction may be able to seize control of the kingdom.
 If they fail, they risk being devoured by the Monster as it rampages.
 
+## Overview
+During the game you will portray a character who has a set of secret objectives.
+Your score will be determined by how many of those objectives you are able to accomplish.
+
+You will try to accomplish your objectives by manipulating a tableau of cards.
+Whether you accomplish each objective depends on the state of the tableau when the game ends.
+
+You win if you accomplish more of your objectives than the other players.
+
+Note that some characters have objectives that are mutually compatible.
+These characters are natural allies.
+Other characters are natural rivals.
+So, you will want to try to figure out what the other players are trying to do and adjust your strategy accordingly.  
+
 ## Components
 - 54 Cards:
    - 27 Shrine Cards
