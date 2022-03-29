@@ -1,5 +1,5 @@
 # Castle of Magic: The Card Game
-A modern successor to a classic board game of magic and intrigue.
+A modern reimagining of a classic board game of magic and intrigue.
 
 Castle of Magic: The Card Game is a game for 4-6 players and can be played in 30-60 minutes.
 It is intended for players who are at least twelve years old.
