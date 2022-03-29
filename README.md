@@ -4,20 +4,28 @@ A modern reimagining of a classic board game of magic and intrigue.
 Castle of Magic: The Card Game is a game for 4-6 players and can be played in 30-60 minutes.
 It is intended for players who are at least twelve years old.
 
-## Overview
+## Background
+Thirty years ago, a group of adventurers journeyed to Castle Bondi to confront a Monster that lurked in its depths.
+By manipulating the occult power of three arcana they were able to perform a ritual spell and imprison the Monster.
+The adventurers later established a network of twenty-seven shrines to channel the magical energies required to ensure that the Monster could not escape its prison.
 
-You win if you have the most points at the end of the game.
+Recently, however, three rival factions of wizards have discovered how to corrupt the shrines and use their power to control the countries in which they are located.
+As a result, the spell that binds the Monster has begun to falter.
+
+So, wizards from the three factions have come together to harness the power of the shrines and try to banish the monster once and for all.
+If they succeed, their faction may be able to seize control.
+If they fail, they risk being devoured by the Monster or even releasing the Monster to rampage across the countryside.
 
 ## Components
-- 65 Cards:
+- 54 Cards:
    - 27 Tableau Cards
-   - 13 Character Cards
+   - 10 Character Cards
       - 9 Basic Character Cards
-      - 3 Cultist Cards
-      - 1 Hydra Card
+      <!-- - 3 Cultist Cards -->
+      - 1 Monster Card
    - 8 Ritual Cards
-   - 8 Outcome Cards
-   - 6 Arcanum Cards
+   - 3 Outcome Cards
+   - 3 Arcanum Cards
    - 3 Country Cards
 
 - 12 Pawns:
@@ -44,7 +52,7 @@ Each basic character scores one point for each country that their guild controls
 
 Each basic character scores one point for each piece of regalia that they control at the end of the game.
 
-If a basic character is devoured by the Hydra, they score zero points.
+If a basic character is devoured by the Monster, they score zero points.
 
 ### Cultists
 Each basic character belongs to one of the three clans. Cultists do not owe fealty to any of the three countries. Instead, cultists worship the Hydra.
@@ -53,9 +61,9 @@ Each cultist scores one point for each country that their guild controls at the 
 
 Each cultist scores one point for each piece of regalia that they control at the end of the game.
 
-If a cultist is devoured by the Hydra, they score one point.
+Each cultist scores one point if the Monster devours any characters at the end of the game.
 
-### The Hydra
-The Hydra scores seven points if they devour a character during the game.
+If a cultist is devoured by the Monster, they score one point.
 
-The Hydra cannot devour themself.
+### The Monster
+The Monster scores seven points if they devour any characters at the end of the game.
