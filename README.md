@@ -23,8 +23,8 @@ Those characters are natural allies.
 Other characters are natural rivals.
 You will want to try to figure out what the other characters' objectives are and adjust your strategy accordingly.
 
-To accomplish your objectives, you will manipulate cards in a tableau.
-Each card in the tableau can be turned either face up or face down.
+To accomplish your objectives, you will manipulate the cards in a tableau.
+Each card can be turned either face up or face down.
 On your turn you can flip up to two cards, thereby changing the current state of the tableau.
 Whether you accomplish each of your objectives depends on the state of the tableau at the end of the game.
 
