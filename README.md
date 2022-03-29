@@ -57,7 +57,7 @@ On your turn you can choose to turn one of these cards face up instead of manipu
 The ritual spell will be cast when all eight ritual cards have been turned face up.
 
 You will score 1000 points for each secret objective that you accomplish. 
-You will win the game is you score the most points.
+You will win the game if you score the most points.
 
 ## Components
 - 54 Cards:
