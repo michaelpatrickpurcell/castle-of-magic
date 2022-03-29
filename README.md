@@ -5,7 +5,7 @@ Castle of Magic: The Card Game is a game for 4-6 players and can be played in 30
 It is intended for players who are at least twelve years old.
 
 ## Background
-Thirty years ago, a group of adventurers journeyed to Castle Bondi to confront a Monster that lurked in its depths.
+Thirty years ago, a group of adventurers journeyed to Castle Bondi to confront a Monster that lurked within.
 By manipulating the occult power of three arcana they were able to perform a ritual spell and imprison the Monster.
 The adventurers later established a network of twenty-seven shrines to channel the magical energies required to ensure that the Monster could not escape its prison.
 
@@ -46,7 +46,7 @@ Each kind of character scores points in different ways.
 ### Basic Characters
 Each basic character belongs to one of the three factions and is from one of the three countries. Each character's affiliations are represented on their character card in the form of a coat of arms.
 
-The escutcheon (shield) in a character's coat of arms indicates the country that they are from. The supporters (animals either behind or to either side of the escutcheon) in a character's coat of arms indicate the faction that they belong to.
+The shield in a character's coat of arms indicates the country that they are from. The supporters (animals either behind or to either side of the shield) in a character's coat of arms indicate the faction that they belong to.
 
 Each basic character scores one point for each country that their faction controls at the end of the game. They score one additional point if their faction controls the country that they are from.
 
