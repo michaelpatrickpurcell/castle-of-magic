@@ -13,7 +13,7 @@ Recently, however, three rival factions of wizards have discovered how to corrup
 As a result, the spell that binds the Monster has begun to falter.
 
 Now, wizards from the three factions have come together to harness the power of the shrines and try to banish the monster once and for all.
-If they succeed, their faction may be able to seize control of the kingdom.
+If they succeed, their factions will vie for control of the kingdom.
 If they fail, they risk releasing the Monster and being devoured as it rampages.
 
 <!-- ## Overview
