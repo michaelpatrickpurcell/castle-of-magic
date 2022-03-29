@@ -1,5 +1,5 @@
 # Castle of Magic: The Card Game
-A modern reimagining of a classic board game of magic and intrigue.
+A modern successor to a classic board game of magic and intrigue.
 
 Castle of Magic: The Card Game is a game for 4-6 players and can be played in 30-60 minutes.
 It is intended for players who are at least twelve years old.
@@ -12,13 +12,13 @@ The adventurers later established a network of twenty-seven shrines to channel t
 Recently, however, three rival factions of wizards have discovered how to corrupt the shrines and use their power to control the countries in which they are located.
 As a result, the spell that binds the Monster has begun to falter.
 
-So, wizards from the three factions have come together to harness the power of the shrines and try to banish the monster once and for all.
-If they succeed, their faction may be able to seize control.
-If they fail, they risk being devoured by the Monster or even releasing the Monster to rampage across the countryside.
+Now, wizards from the three factions have come together to harness the power of the shrines and try to banish the monster once and for all.
+If they succeed, their faction may be able to seize control of the kingdom.
+If they fail, they risk being devoured by the Monster as it rampages.
 
 ## Components
 - 54 Cards:
-   - 27 Tableau Cards
+   - 27 Shrine Cards
    - 10 Character Cards
       - 9 Basic Character Cards
       <!-- - 3 Cultist Cards -->
@@ -40,21 +40,21 @@ If they fail, they risk being devoured by the Monster or even releasing the Mons
 test
 
 ## Scoring
-There are three kinds of characters: basic characters, cultists, and the hydra.
+There are two kinds of characters: basic characters and the Monster.
 Each kind of character scores points in different ways.
 
 ### Basic Characters
-Each basic character belongs to one of the three clans and hails from one of the three countries. Each character's affiliations are represented on their character card in the form of a coat of arms.
+Each basic character belongs to one of the three factions and is from one of the three countries. Each character's affiliations are represented on their character card in the form of a coat of arms.
 
-The escutcheon (shield) in a character's coat of arms indicates the country to which they owe fealty. The supporters (animals either behind or to either side of the escutcheon) in a character's coat of arms indicate the guild to which they belong.
+The escutcheon (shield) in a character's coat of arms indicates the country that they are from. The supporters (animals either behind or to either side of the escutcheon) in a character's coat of arms indicate the faction that they belong to.
 
-Each basic character scores one point for each country that their guild controls at the end of the game. They score one additional point if their guild controls the country to which the owe fealty.
+Each basic character scores one point for each country that their faction controls at the end of the game. They score one additional point if their faction controls the country that they are from.
 
 Each basic character scores one point for each piece of regalia that they control at the end of the game.
 
 If a basic character is devoured by the Monster, they score zero points.
 
-### Cultists
+<!-- ### Cultists
 Each basic character belongs to one of the three clans. Cultists do not owe fealty to any of the three countries. Instead, cultists worship the Hydra.
 
 Each cultist scores one point for each country that their guild controls at the end of the game.
@@ -63,7 +63,7 @@ Each cultist scores one point for each piece of regalia that they control at the
 
 Each cultist scores one point if the Monster devours any characters at the end of the game.
 
-If a cultist is devoured by the Monster, they score one point.
+If a cultist is devoured by the Monster, they score one point. -->
 
 ### The Monster
-The Monster scores seven points if they devour any characters at the end of the game.
+The Monster scores seven points if they devour any characters.
