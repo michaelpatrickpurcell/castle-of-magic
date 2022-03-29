@@ -45,19 +45,19 @@ So, you will want to try to figure out what the other wizards' secret objectives
 
 To accomplish your secret objectives, you will manipulate the twenty-seven shrines.
 Each shrine is represented by a shrine card.
-These shrine cards are arranged in a tableau consisting of three rows of nine cards each.
+These shrine cards will be arranged in a tableau consisting of three rows of nine cards each.
 Each shrine card can be turned either face up or face down.
 On your turn you can flip one or two of the shrine cards, thereby changing the current state of the tableau.
-Whether you accomplish each of your secret objectives depends on the state of the tableau at the end of the game.
+Whether you accomplish each of your secret objectives will depend on the state of the tableau at the end of the game.
 
-The game ends when you cast the ritual spell.
-The nature of this spell is determined by the eight ritual cards.
+The game will end when you cast the ritual spell.
+The nature of this spell will be determined by the eight ritual cards.
 These cards start face down.
 On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
-The ritual spell is cast when all eight ritual cards have been turned face up.
+The ritual spell will be cast when all eight ritual cards have been turned face up.
 
 You will score 1000 points for each secret objective that you accomplish. 
-You win the game is you score the most points.
+You will win the game is you score the most points.
 
 ## Components
 - 54 Cards:
