@@ -17,18 +17,24 @@ If they succeed, their faction may be able to seize control of the kingdom.
 If they fail, they risk being devoured by the Monster as it rampages.
 
 ## Overview
-During the game you will portray a character who has a set of secret objectives.
-Your score will be determined by how many of those objectives you are able to accomplish.
-
-You will try to accomplish your objectives by manipulating a tableau of cards.
-Whether you accomplish each objective depends on the state of the tableau when the game ends.
-
-You win if you accomplish more of your objectives than the other players.
-
-Note that some characters have objectives that are mutually compatible.
-These characters are natural allies.
+You will assume the role of a character who has a set of secret objectives.
+Some characters have objectives that are mutually compatible.
+Those characters are natural allies.
 Other characters are natural rivals.
-So, you will want to try to figure out what the other players are trying to do and adjust your strategy accordingly.  
+You will want to try to figure out what the other characters' objectives are and adjust your strategy accordingly.
+
+To accomplish your objectives, you will manipulate a tableau of cards.
+Each card in the tableau can be turned either face up or face down.
+On your turn you can flip up to two cards, thereby changing the current state of the tableau.
+Whether you accomplish each of your objectives depends on the state of the tableau at the end of the game.
+
+You will use a second set of cards to track your progress.
+These cards start face down.
+On your turn you can choose to turn one of these cards face up instead of manipulating the tableau.
+The game ends when all of these cards have been turned face up.
+
+You will score points for each objective that you accomplish. 
+You win if you score the most points.
 
 ## Components
 - 54 Cards:
