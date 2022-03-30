@@ -56,8 +56,7 @@ These cards start face down.
 On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
 The ritual spell will be cast when all eight ritual cards have been turned face up. -->
 
-You will score 1000 points for each secret objective that you accomplish.
-You win if you score the most points.
+You will win if you accomplish the most secret objectives.
 It is possible for there to be more than one winner.
 
 ## Components
