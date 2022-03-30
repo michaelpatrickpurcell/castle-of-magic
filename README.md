@@ -51,6 +51,7 @@ These shrine cards will be arranged in a tableau. -->
 On your turn you can flip one or two of the shrine cards, thereby changing the state of the tableau. -->
 
 The game will end when you cast the ritual spell.
+The fate of the Monster will depend on which version of the ritual spell you cast. 
 <!-- The nature of this spell will be determined by the eight ritual cards.
 These cards start face down.
 On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
