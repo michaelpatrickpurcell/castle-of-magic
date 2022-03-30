@@ -39,38 +39,29 @@ You win if you score the most points.
 ## Overview
 You will assume the role of one of the wizards who will try to harness the power of the shrines.
 You will have a set of secret objectives based on what faction you belong to and what country you are from.
-<!--You will need to try to figure out what the other wizards' secret objectives are and adjust your strategy accordingly.-->
-<!--Other wizards from your faction will be your natural allies.
-Other wizards from your country will be your natural rivals. -->
 
 To accomplish your objectives, you will manipulate the twenty-seven shrines.
 Whether you accomplish each of your objectives will depend on the state of the shrines at the end of the game.
-<!-- Each shrine will be represented by a shrine card.
-These shrine cards will be arranged in a tableau. -->
-<!-- Each shrine card can be turned either face up or face down to indicate if the corresponding shrine is active or inactive.
-On your turn you can flip one or two of the shrine cards, thereby changing the state of the tableau. -->
 
 The game will end when you cast the ritual spell.
 The fate of the Monster will depend on which version of the ritual spell you cast. 
-<!-- The nature of this spell will be determined by the eight ritual cards.
-These cards start face down.
-On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
-The ritual spell will be cast when all eight ritual cards have been turned face up. -->
 
 Your score will depend on how many of your objectives you accomplish. 
 The players with the highest scores will win the game. 
 
 ## Components
-- 54 Cards:
+- 65 Cards:
    - 27 Shrine Cards
-   - 10 Character Cards
-      - 9 Basic Character Cards
-      <!-- - 3 Cultist Cards -->
+   - 13 Character Cards
+      - 9 Wizard Cards
+      - 3 Cultist Cards
       - 1 Monster Card
    - 8 Ritual Cards
-   - 3 Outcome Cards
-   - 3 Arcanum Cards
+   - 8 Outcome Cards
+   - 6 Arcanum Cards
    - 3 Country Cards
+   
+- 6 Player Aides
 
 - 12 Pawns:
    - 2 Red Pawns
@@ -83,7 +74,7 @@ The players with the highest scores will win the game.
 ## Set Up
 test
 
-## The Tableau
+## The 27 Shrines
 test
 
 ### Regalia
@@ -93,15 +84,22 @@ test
 test
 
 ## Characters
-There are two kinds of characters, wizards and the Monster.
+There are three kinds of characters: wizards, cultists, and the Monster.
 
 ### Wizards
-Each wizard belongs to one of the three factions and is from one of the three countries. Each wizard's affiliations are represented in the form of a coat of arms.
+Each wizard belongs to one of the three factions and is from one of the three countries.
+Each wizard's affiliations are represented in the form of a coat of arms.
 
-The shield in a character's coat of arms indicates the country that they are from.
-The supporters (animals either behind or to either side of the shield) in a character's coat of arms indicate the faction that they belong to.
+The shield in a wizard's coat of arms indicates the country that they are from.
+The supporters (animals either behind or to either side of the shield) in a wizard's coat of arms indicate the faction that they belong to.
 
-Each wizard has a set of objectives that is derived from their affiliations.
+Each wizard scores:
+  - 1000 points for every country that their faction controls.
+  - 1000 points if their faction controls the country that they are from.
+  - 1000 points for every piece of regalia that they claim.
+  - 1000 points for dominating the Monster.
+
+<!--Each wizard has a set of objectives that is derived from their affiliations.
 
   - Three objectives are about which faction controls each of the three countries.
      - Ensure that your faction controls Kida.
@@ -118,27 +116,37 @@ Each wizard has a set of objectives that is derived from their affiliations.
 
   - One objective is about what happens to the Monster when the ritual spell is cast.
      - Dominate the Monster.
+-->
+A wizard who is devoured by the Monster cannot claim any of the regalia.
 
 At most, a wizard can score 7000 points, 1000 points for accomplishing each of seven different objectives.  To do so, their faction must rule all three countries (3000 points) which necessarily ensures that their faction controls the country that they are from (1000 points), they must claim two regalia (2000 points), and they must dominate the Monster as a result of the ritual spell (1000 points).
 
-<!-- ### Cultists
-Each basic character belongs to one of the three clans. Cultists do not owe fealty to any of the three countries. Instead, cultists worship the Hydra.
+### Cultists
+Each cultist belongs to one of the three factions.
+Cultists do not owe fealty to any of the three countries.
+Instead, cultists worship the Monster.
+Each cultists affiliations are represented in the form of a coat of arms.
 
-Each cultist scores one point for each country that their guild controls at the end of the game.
+The shield in a cultists coat of arms bears the image of the Monster. 
+The supporters (animals either behind or to either side of the shield) in a cultist's coat of arms indicate the faction that they belong to.
 
-Each cultist scores one point for each piece of regalia that they control at the end of the game.
+Each cultist scores:
+  - 1000 points for each country that their faction controls.
+  - 1000 points for each piece of regalia that they claim.
+  - 1000 points if the Monster devours any wizards or cultists.
 
-Each cultist scores one point if the Monster devours any characters at the end of the game.
-
-If a cultist is devoured by the Monster, they score one point. -->
+A cultist who is devoured by the monster cannot claim any of the regalia.
 
 ### The Monster
 The Monster has the ability to disguise itself as a wizard.
 If you are the Monster, then you can manipulate the shrines and the ritual cards as if you were a wizard.
 The only practical difference between the Monster and a wizard that they have different objectives.
 
-The Monster's only objective is to devour at least one wizard.
-If the Monster accomplishes this objective then they score 7000 points.
+The Monster scores:
+  - 7000 points it devours at least one wizard or cultist.
+
+<!--The Monster's only objective is to devour at least one wizard or cultist.
+If the Monster accomplishes this objective then they score 7000 points.-->
 
 The Monster can claim regalia but will not score points for doing so.
 The Monster cannot devour itself.
