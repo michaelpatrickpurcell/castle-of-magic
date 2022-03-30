@@ -16,17 +16,17 @@ Now, wizards from the three factions have come together to harness the power of 
 If they succeed, their factions will vie for control of the kingdom.
 If they fail, they risk releasing the Monster and being devoured as it rampages.
 
-## Overview
+<!-- ## Overview
 You will assume the role of a character who has a set of secret objectives.
 You will want to try to figure out what the other characters' objectives are and adjust your strategy accordingly.
-<!-- Some characters have objectives that are mutually compatible.
+Some characters have objectives that are mutually compatible.
 Those characters are natural allies.
-Other characters are natural rivals. -->
+Other characters are natural rivals.
 
 To accomplish your objectives, you will manipulate the cards in a tableau.
 Each card can be turned either face up or face down.
 Whether you accomplish each of your objectives depends on the state of the tableau at the end of the game.
-<!-- On your turn you can flip up to two cards, thereby changing the current state of the tableau. -->
+On your turn you can flip up to two cards, thereby changing the current state of the tableau.
 
 You will use a second set of cards to track your progress.
 These cards start face down.
@@ -35,7 +35,7 @@ The game ends when all of these cards have been turned face up.
 
 You will score points for each objective that you accomplish.
 You win if you score the most points.
-
+ -->
 ## Overview
 You will assume the role of one of the wizards who will try to harness the power of the shrines.
 You will need to try to figure out what the other wizards' secret objectives are and adjust your strategy accordingly.
