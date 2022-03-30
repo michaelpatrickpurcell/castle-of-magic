@@ -39,7 +39,7 @@ You win if you score the most points.
 ## Overview
 You will assume the role of one of the wizards who will try to harness the power of the shrines.
 You will have a set of secret objectives based on what faction you belong to and what country you are from.
-You will need to try to figure out what the other wizards' secret objectives are and adjust your strategy accordingly.
+<!--You will need to try to figure out what the other wizards' secret objectives are and adjust your strategy accordingly.-->
 <!--Other wizards from your faction will be your natural allies.
 Other wizards from your country will be your natural rivals. -->
 
