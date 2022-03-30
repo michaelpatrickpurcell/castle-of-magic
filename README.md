@@ -56,8 +56,7 @@ These cards start face down.
 On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
 The ritual spell will be cast when all eight ritual cards have been turned face up. -->
 
-You will win if you accomplish the most secret objectives.
-It is possible for there to be more than one winner.
+The wizards who accomplish the most of their secret objectives will be the winners. 
 
 ## Components
 - 54 Cards:
