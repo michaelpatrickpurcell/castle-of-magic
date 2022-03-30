@@ -43,8 +43,8 @@ You will have a set of secret objectives based on what faction you belong to and
 <!--Other wizards from your faction will be your natural allies.
 Other wizards from your country will be your natural rivals. -->
 
-To accomplish your secret objectives, you will manipulate the twenty-seven shrines.
-Whether you accomplish each of your secret objectives will depend on the state of the shrines at the end of the game.
+To accomplish your objectives, you will manipulate the twenty-seven shrines.
+Whether you accomplish each of your objectives will depend on the state of the shrines at the end of the game.
 <!-- Each shrine will be represented by a shrine card.
 These shrine cards will be arranged in a tableau. -->
 <!-- Each shrine card can be turned either face up or face down to indicate if the corresponding shrine is active or inactive.
@@ -56,7 +56,8 @@ These cards start face down.
 On your turn you can choose to turn one of these cards face up instead of manipulating the shrines.
 The ritual spell will be cast when all eight ritual cards have been turned face up. -->
 
-The wizards who accomplish the most of their secret objectives will be the winners. 
+Your score will depend on how many of your objectives you accomplish. 
+The players with the highest scores will win the game. 
 
 ## Components
 - 54 Cards:
