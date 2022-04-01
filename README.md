@@ -94,7 +94,7 @@ The columns of the tableau contain the cards that represent the shrines that are
   - The rightmost three columns contain cards for the shrines that are located in Sorrell.
 
 Most of the shrines have been corrupted by one of the three factions.
-Only the shrines in which the three regalia are interred have not been corrupted.
+Only the shrines in which the regalia are interred have not been corrupted.
 The factions can use the shrines that they have corrupted to exert control over the countries in which those shrines are located.
   - Eight shrines have been corrupted by the Dragon Masters.
   - Eight shrines have been corrupted by the Eagle Lords.
