@@ -67,6 +67,8 @@ Each of the arcana can be used in one of two ways:
 
 So, there are eight different possibilities for what will happen when the ritual spell is cast.
 
+How each of the arcana are used will depend on the state of the tableau (see below) when the ritual spell is cast.
+
 ## Regalia
 Three pieces of regalia - the amulet, the crown, and the scepter - were originally used to control the Monster.
 Each piece of regalia was interred within one of the twenty-seven shrines when the Monster was imprisoned.
