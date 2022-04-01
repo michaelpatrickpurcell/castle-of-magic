@@ -56,7 +56,7 @@ The players with the highest scores will win the game.
 test
 
 ## Arcana
-The three arcana are: the bell, the book, and the candle.
+The three arcana are the bell, the book, and the candle.
 The arcana were originally used to summon the Monster.
 Now, the wizards will harness the power of the arcana to cast the ritual spell.
 
@@ -69,7 +69,7 @@ Each of the arcana can be used in one of two ways:
 So, there are eight different possibilities for what will happen when the ritual spell is cast.
 
 ## Regalia
-The three pieces of regalia are: the amulet, the crown, and the scepter.
+The three pieces of regalia are the amulet, the crown, and the scepter.
 The regalia were originally used to control the Monster.
 Each piece of regalia was interred within one of the twenty-seven shrines when the Monster was imprisoned.
 Now, the regalia are treasures that the wizards can claim to further their personal ambitions.
