@@ -95,16 +95,16 @@ The factions can use the shrines that they have corrupted to exert control over 
   - Eight shrines have been corrupted by the Wolf Mages.
 
 Each shrine can be either active or inactive.
-  - If a shrine card is face up, then the corresponding shrine is active.
-  - If a shrine card is face down, then the corresponding shrine in inactive.
+  - If a shrine card is face up, the corresponding shrine is active.
+  - If a shrine card is face down, the corresponding shrine in inactive.
 
 ## The Ritual Spell
 The game ends when the wizards cast the ritual spell.
 The nature of the ritual spell depends on how each of the arcana are used when it is cast.
 How each arcanum is used depends on the state of the shrines that are attuned to that arcanum.
-  - If the majority of the shrines in the top row of the tableau are active, then the bell is ringing. Otherwise, the bell is silent.
-  - If the majority of the shrines in the middle row of the tableau are active, then the book is open. Otherwise, the bell is closed.
-  - If the majority of the shrines in the bottom row of the tableau are active, then the candle is lit. Otherwise, the candle is unlit.
+  - If the majority of the shrines in the top row of the tableau are active, the bell is ringing. Otherwise, the bell is silent.
+  - If the majority of the shrines in the middle row of the tableau are active, the book is open. Otherwise, the bell is closed.
+  - If the majority of the shrines in the bottom row of the tableau are active, the candle is lit. Otherwise, the candle is unlit.
 
 ### Outcomes
 There are eight possible outcomes when the ritual spell is cast.
