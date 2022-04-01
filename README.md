@@ -18,7 +18,7 @@ If they succeed, their factions will vie for control of the kingdom.
 If they fail, they risk releasing the Monster and being devoured as it rampages.
 
 ## Overview
-You will assume the role of one of the wizards who will try to harness the power of the shrines.
+You will assume the role of a character who will try to harness the power of the shrines.
 You will have a set of secret objectives based on what faction you belong to and what country you are from.
 
 To accomplish your objectives, you will manipulate the twenty-seven shrines.
