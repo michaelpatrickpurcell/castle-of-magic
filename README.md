@@ -44,13 +44,7 @@ The players with the highest scores will win the game.
 
 - 6 Player Aides
 
-- 12 Pawns:
-   - 2 Red Pawns
-   - 2 Orange Pawns
-   - 2 Yellow Pawns
-   - 2 Green Pawns
-   - 2 Blue Pawns
-   - 2 Purple Pawns
+- 12 Pawns
 
 ## Set Up
 test
@@ -66,8 +60,6 @@ Each of the arcana can be used in one of two ways:
   - The candle can be either lit or unlit.
 
 So, there are eight different possibilities for what will happen when the ritual spell is cast.
-
-How each of the arcana are used will depend on the state of the tableau (see below) when the ritual spell is cast.
 
 ## Regalia
 Three pieces of regalia - the amulet, the crown, and the scepter - were originally used to control the Monster.
