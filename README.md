@@ -10,7 +10,7 @@ By manipulating the occult power of three arcana they were able to perform a rit
 The adventurers later established a network of twenty-seven shrines to channel the magical energies required to ensure that the Monster could not escape its prison.
 
 Recently, three rival factions of wizards - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have discovered how to corrupt the shrines.
-These factions began to use their power to control the three countries - Kida, Marus, and Sorrell - in which the shrines are located.
+These factions began to use their power to control the three countries in which the shrines are located.
 As a result, the spell that binds the Monster has begun to falter.
 
 Now, wizards from the three factions have come together to harness the power of the shrines.<!--and try to banish the monster once and for all.-->
@@ -49,6 +49,14 @@ The players with the highest scores will win the game.
 ## Set Up
 test
 
+## Countries
+The three countries - Kida, Marus, and Sorrell - are where the twenty-seven shrines are located.
+Nine shrines are in each country.
+When the ritual spell is cast, the factions will vie for control of the three countries.
+
+Each country will be controlled by the faction with the most active shrines in that country.
+If two or more of the factions are tied for the most active shrines in a country, then none of the factions will control that country.
+
 ## Arcana
 Three arcana - the bell, the book, and the candle - were originally used to summon the Monster.
 Now, the wizards will harness the power of the arcana to cast the ritual spell.
@@ -65,6 +73,8 @@ So, there are eight different possibilities for what will happen when the ritual
 Three pieces of regalia - the amulet, the crown, and the scepter - were originally used to control the Monster.
 Each piece of regalia was interred within one of the twenty-seven shrines when the Monster was imprisoned.
 Now, the regalia are treasures that the wizards can claim to further their personal ambitions.
+
+To claim a piece of regalia, one of your pawns must be on that regalia's shrine card when the ritual spell is cast. You can claim a piece of regalia regardless of whether its shrine card is face up or face down.
 
 When the ritual spell is cast, any character who has claimed a piece of regalia may draw the attention of the Monster.
 In some cases, the character who claimed a certain piece of regalia will be able to dominate the Monster.
@@ -87,16 +97,17 @@ The columns of the tableau contain the cards that represent the shrines that are
   - The central three columns contain cards for the shrines that are located in Marus.
   - The rightmost three columns contain cards for the shrines that are located in Sorrell.
 
+Each shrine can be either active or inactive.
+  - If a shrine card is face up, the corresponding shrine is active.
+  - If a shrine card is face down, the corresponding shrine in inactive.
+
+### Corrupted Shrines
 Most of the shrines have been corrupted by one of the three factions.
 Only the shrines in which the regalia are interred have not been corrupted.
 The factions can use the shrines that they have corrupted to exert control over the countries in which those shrines are located.
   - Eight shrines have been corrupted by the Dragon Masters.
   - Eight shrines have been corrupted by the Eagle Lords.
   - Eight shrines have been corrupted by the Wolf Mages.
-
-Each shrine can be either active or inactive.
-  - If a shrine card is face up, the corresponding shrine is active.
-  - If a shrine card is face down, the corresponding shrine in inactive.
 
 ## The Ritual Spell
 The game ends when the wizards cast the ritual spell.
@@ -181,3 +192,23 @@ The Monster scores:
 
 The Monster can claim regalia but will not score points for doing so.
 The Monster cannot devour itself.
+
+## Gameplay
+On your turn you must either manipulate the shrines or advance the ritual spell.
+
+### Manipulating the Shrines
+To manipulate the shrines you must:
+  1. Pick up at least one of your pawns.
+  2. For every pawn that you picked up you must:
+     1. Flip one shrine card that does not have a pawn on it.
+     2. Place a pawn on the shrine card that you flipped.
+
+To claim a piece of regalia, one of your pawns must be on its shrine card when the ritual spell is cast.
+You can claim a piece of regalia regardless of whether its shrine card is face up or face down.
+
+### Advancing the Ritual Spell
+To advance the ritual spell, you must:
+  1. Flip any one of the face down outcome cards so that it is face up.
+
+### Ending the Game
+The game ends immediately when the last ritual card is turned face up.
