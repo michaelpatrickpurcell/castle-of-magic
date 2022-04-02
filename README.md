@@ -6,19 +6,19 @@ It is intended for players who are at least twelve years old.
 
 ## Background
 Thirty years ago, a group of adventurers journeyed to Castle Bondi to confront a Monster that lurked within.
-By manipulating the occult power of three arcana they were able to perform a ritual spell and imprison the Monster.
+By wielding the magical power of three arcana they were able to perform a ritual spell and imprison the Monster.
 The adventurers later established a network of twenty-seven shrines to channel the magical energies required to ensure that the Monster could not escape its prison.
 
-Recently, three rival factions of wizards have discovered how to corrupt the shrines.
+Recently, three rival factions of wizards discovered how to corrupt the shrines.
 These factions began to use their power to control the kingdom in which the shrines are located.
 As a result, the spell that binds the Monster has begun to falter.
 
-Now, wizards from the three factions have come together to harness the power of the shrines.
+Now, wizards from the three factions have come together to use the shrines to banish the Monster.
 If they succeed, their factions will vie for control of the kingdom.
 If they fail, they risk releasing the Monster and being devoured as it rampages.
 
 ## Overview
-You will assume the role of a character who will try to harness the power of the shrines.
+You will assume the role of a character who will try use the shrines to banish the Monster.
 You will have a set of secret objectives based on what faction you belong to and what country you are from.
 
 To accomplish your objectives, you will manipulate the twenty-seven shrines.
@@ -120,17 +120,17 @@ The factions can use the shrines that they have corrupted to exert control over 
 ## The Ritual Spell
 The game ends when the wizards cast the ritual spell.
 The nature of the ritual spell depends on how each of the arcana are used when it is cast.
-How each arcanum is used depends on the state of the shrines that are attuned to that arcanum.
-  - If the majority of the shrines in the top row of the tableau are active, the bell is ringing. Otherwise, the bell is silent.
-  - If the majority of the shrines in the middle row of the tableau are active, the book is open. Otherwise, the bell is closed.
-  - If the majority of the shrines in the bottom row of the tableau are active, the candle is lit. Otherwise, the candle is unlit.
+How each each of the arcana is used depends on the state of the shrines that are attuned to that arcanum.
+  - If the majority (five or more) of the shrines in the top row of the tableau are active, the bell is ringing. Otherwise, the bell is silent.
+  - If the majority (five or more) of the shrines in the middle row of the tableau are active, the book is open. Otherwise, the bell is closed.
+  - If the majority (five or more) of the shrines in the bottom row of the tableau are active, the candle is lit. Otherwise, the candle is unlit.
 
 ### Outcomes
 There are eight possible outcomes when the ritual spell is cast.
   - The Monster is banished outright.
-  - The character who claimed the amulet dominates the Monster. If no one claimed the amulet then the Monster is released. Then everyone is devoured as the Monster rampages.
-  - The character who claimed the crown dominates the Monster. If no one claimed the crown then the Monster is released. Then everyone is devoured as the Monster rampages.
-  - The character who claimed the scepter dominates the Monster. If no one claimed the scepter then the Monster is released. Then everyone is devoured as the Monster rampages.
+  - The character who claimed the amulet dominates the Monster. If no one claimed the amulet then the Monster is released. Everyone is devoured as the Monster rampages.
+  - The character who claimed the crown dominates the Monster. If no one claimed the crown then the Monster is released. Everyone is devoured as the Monster rampages.
+  - The character who claimed the scepter dominates the Monster. If no one claimed the scepter then the Monster is released. Everyone is devoured as the Monster rampages.
   - The character who claimed the amulet is devoured by the Monster. Afterwards, the Monster is banished.
   - The character who claimed the crown is devoured by the Monster. Afterwards, the Monster is banished.
   - The character who claimed the scepter is devoured by the Monster. Afterwards, the Monster is banished.
@@ -138,7 +138,7 @@ There are eight possible outcomes when the ritual spell is cast.
 
 ### Determining the Outcome
 Each outcome corresponds to one of the ways the three arcana can be used in the ritual spell.
-The mapping between outcomes and how the arcana are is random and changes from game to game.
+The mapping between outcomes and how the arcana are used is changes from game to game.
 
 Each outcome is represented by an outcome card.
 Each way the arcana can be used is represented by a ritual card.
@@ -165,15 +165,15 @@ The supporters (animals either behind or to either side of the shield) in a wiza
 Each cultist is affiliated with a faction.
 Cultists are not affiliated with any country.
 Instead, cultists worship the Monster.
-Each cultists affiliations are represented in the form of a coat of arms.
+Each cultist's affiliations are represented in the form of a coat of arms.
 
 The shield in a cultists coat of arms bears the image of the Monster.
 The supporters in a cultist's coat of arms indicate the faction that they belong to.
 
 ### The Monster
 The Monster has the ability to disguise itself as a wizard.
-If you are the Monster, then you can manipulate the shrines and the ritual cards as if you were a wizard.
-The only practical difference between the Monster and a wizard that they have different objectives.
+If you are the Monster, then you can manipulate the shrines and the ritual cards as normal.
+The only practical difference between the Monster and a wizard or a cultist is that they have different objectives.
 
 ## Playing the Game
 The player who has most recently performed a magic trick should take the first turn.
@@ -201,7 +201,7 @@ To advance the ritual spell, you must:
 The game ends immediately when the last ritual card is turned face up.
 
 ## Objectives
-There are four types of objectives that characters may be trying to accomplish: controlling countries, claiming regalia, dominating the monster, or feeding the Monster.
+There are four types of objectives that you (or others) may be trying to accomplish: controlling countries, claiming regalia, dominating the monster, or feeding the Monster.
 
 ### Controlling Countries
 To control each country, you will need to ensure that your faction has the most active shrines in that country.
