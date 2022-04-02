@@ -51,7 +51,22 @@ The players with the highest scores will win the game.
 - 12 Pawns
 
 ## Set Up
-test
+  1. Shuffle the shrine cards.
+  2. Arrange the shrine cards face down in a tableau consisting of three rows of nine cards each.
+  3. Place the three country country cards below the tableau.
+     1. The Kida card should be placed below the second row of the tableau.
+     2. The Marus card should be placed below the fifth row of the tableau.
+     3. The Sorrell card should be placed below the eighth row of the tableau.
+  4. Place the arcana cards to the sides of the tableau. The cards for the inactive arcana (the ones with an "X" through through the icon) should be placed on the left side of the tableau the cards for the active arcana should be placed on the right side of the tableau.
+     1. The bell cards should be placed next to the top row of the tableau.
+     2. The book cards should be placed next to the middle row of the tableau.
+     3. The candle cards should be placed next to the bottom row of the tableau.
+  5. Arrange the ritual cards face up in a single row above the tableau.
+  6. Shuffle the outcome cards.
+  7. Place one outcome card on top of each ritual card. Ensure that the icons on the ritual cards remain visible, they should "poke out" from underneath the outcome cards.
+  8. Shuffle the character cards.
+  9. Deal a random character card to each player.
+  10. Assign each player a color. Give each player the pawns and the player aide that matches their color.
 
 ## Factions
 The three factions - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have come together to cast the ritual spell.
