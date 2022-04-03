@@ -78,8 +78,7 @@ They will use these corrupted shrines to vie for control of the kingdom.
 The three countries - Kida, Marus, and Sorrell - comprise the kingdom and are where the twenty-seven shrines are located.
 Nine shrines are in each country.
 
-When the ritual spell is cast, the factions will vie for control of the kingdom.
-Each country will be controlled by the faction with the most active shrines in that country.
+When the ritual spell is cast, each country will be controlled by the faction with the most active shrines in that country.
 If two or more of the factions are tied for the most active shrines in a country, then none of the factions will control that country.
 
 ## Regalia
