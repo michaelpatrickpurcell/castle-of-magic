@@ -69,13 +69,13 @@ The players with the highest scores will win the game.
   10. Assign each player a color. Give each player the pawns and the player aide that match their color.
 
 ## Factions
-The three factions - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have come together to cast the ritual spell.
+Three factions of wizards - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have come together to cast the ritual spell.
 They are also political rivals.
 Each faction has corrupted eight of the twenty-seven shrines.
 They will use these corrupted shrines to vie for control of the kingdom.
 
 ## Countries
-The three countries - Kida, Marus, and Sorrell - comprise the kingdom and are where the twenty-seven shrines are located.
+Three countries - Kida, Marus, and Sorrell - comprise the kingdom and are where the twenty-seven shrines are located.
 Nine shrines are in each country.
 
 When the ritual spell is cast, each country will be controlled by the faction with the most active shrines in that country.
