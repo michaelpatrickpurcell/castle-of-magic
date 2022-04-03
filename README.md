@@ -192,6 +192,7 @@ The only mechanical difference between the Monster and a wizard or a cultist dur
 The player who has most recently performed a magic trick should take the first turn.
 
 On your turn you must either manipulate the shrines or advance the ritual spell.
+On your first turn you must manipulate the shrines.
 
 Play proceeds to the left (clockwise). That is, when you have finished your turn, the player to your left will take the next turn.
 
