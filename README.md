@@ -66,7 +66,7 @@ The players with the highest scores will win the game.
   7. Place one outcome card on top of each ritual card. Ensure that the icons on the ritual cards remain visible, they should "poke out" from underneath the outcome cards.
   8. Shuffle the character cards.
   9. Deal a random character card to each player.
-  10. Assign each player a color. Give each player the pawns and the player aide that matches their color.
+  10. Assign each player a color. Give each player the pawns and the player aide that match their color.
 
 ## Factions
 The three factions - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have come together to cast the ritual spell.
