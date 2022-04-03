@@ -215,7 +215,7 @@ To advance the ritual spell, you must:
 The game ends immediately when the last ritual card is turned face up.
 
 ## Objectives
-There are four types of objectives that you (or others) may be trying to accomplish: controlling countries, claiming regalia, dominating the monster, or feeding the Monster.
+There are four types of objectives that you (or others) may be trying to accomplish: controlling countries, claiming regalia, dominating the monster, and feeding the Monster.
 
 ### Controlling Countries
 To control each country, you will need to ensure that your faction has the most active shrines in that country.
