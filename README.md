@@ -54,9 +54,9 @@ The players with the highest scores will win the game.
   1. Shuffle the shrine cards.
   2. Arrange the shrine cards face down in a tableau consisting of three rows of nine cards each.
   3. Place the three country country cards below the tableau.
-     1. The Kida card should be placed below the second row of the tableau.
-     2. The Marus card should be placed below the fifth row of the tableau.
-     3. The Sorrell card should be placed below the eighth row of the tableau.
+     1. The Kida card should be placed below the second column of the tableau.
+     2. The Marus card should be placed below the fifth column of the tableau.
+     3. The Sorrell card should be placed below the eighth column of the tableau.
   4. Place the arcana cards to the sides of the tableau. The cards for the inactive arcana (the ones with an "X" through through the icon) should be placed on the left side of the tableau the cards for the active arcana should be placed on the right side of the tableau.
      1. The bell cards should be placed next to the top row of the tableau.
      2. The book cards should be placed next to the middle row of the tableau.
