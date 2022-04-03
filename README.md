@@ -156,9 +156,8 @@ The mapping between outcomes and how the arcana are used is changes from game to
 
 Each outcome is represented by an outcome card.
 Each way the arcana can be used is represented by a ritual card.
-The ritual cards should be arranged face up in a single row near the tableau.
-Each outcome card should be placed face down on top of a random ritual card.
-Ensure that the outcome cards do not obscure the icons on the underlying ritual cards.
+Each outcome is paired with a random ritual card.
+The outcome card specifies which ritual corresponds to which way the arcana are used.
 
 ### Casting the Ritual Spell
 At the beginning of the game, all of the outcome cards will be face down.
@@ -187,7 +186,7 @@ The supporters in a cultist's coat of arms indicate the faction that they belong
 ### The Monster
 The Monster has the ability to disguise itself as a wizard.
 If you are the Monster, then you can manipulate the shrines and the ritual cards as normal.
-The only practical difference between the Monster and a wizard or a cultist is that they have different objectives.
+The only mechanical difference between the Monster and a wizard or a cultist during the game is that they have different objectives.
 
 ## Playing the Game
 The player who has most recently performed a magic trick should take the first turn.
