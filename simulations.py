@@ -18,7 +18,7 @@ regalia = product(amulet, crown, scepter)
 regalia = list(filter(lambda x: len(set(x)) > 1, regalia))
 
 
-homeland = ("kida", "marus", "sorrell", "hydra")
+homeland = ("kida", "marus", "sorrell")#, "hydra")
 guilds = ("dragon", "eagle", "wolf")
 characters = list(product(homeland, guilds))
 characters.append(("monster","monster"))
@@ -29,7 +29,20 @@ character_rev_dict = {character: i for i,character in enumerate(characters)}
 six_characters = list(combinations(characters, 6))
 
 six_player_games = product(six_characters, arcana, countries, regalia)
-n = len(six_characters) * len(arcana) * len(countries) * len(regalia)
+def filter_func(game):
+    characters = game[0]
+    scores = {c:0 for c in characters}
+    arcana = game[1]
+    guilds = game[2]
+    regalia = game[3]
+    kings = [characters[regalia[i]] for i in range(3)]
+    if (("monster", "monster") in kings):
+        return False
+    else:
+        return True
+
+six_player_games = list(filter(filter_func, six_player_games))
+n = len(six_player_games)#len(six_characters) * len(arcana) * len(countries) * len(regalia)
 #game_list = list(six_player_games)
 
 def six_player_scores(game):
@@ -111,7 +124,7 @@ results = -1*np.ones((n, len(characters)))
 for i in range(n):
     if i % 1000000 == 0:
         print(i)
-    game = next(six_player_games)
+    game = six_player_games[i]
     scores = six_player_scores(game)
     for c in scores:
         results[i][character_rev_dict[c]] = scores[c]
