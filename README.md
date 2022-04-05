@@ -18,7 +18,7 @@ If they succeed, their factions will vie for control of the kingdom.
 If they fail, they risk releasing the Monster and being devoured as it rampages.
 
 ## Overview
-You will assume the role of a character who will try use the shrines to banish the Monster.
+You will assume the role of a wizard who will try use the shrines to banish the Monster.
 You will have a set of secret objectives based on what faction you belong to and what country you are from.
 
 To accomplish your objectives, you will manipulate the twenty-seven shrines.
@@ -54,9 +54,9 @@ The players with the highest scores will win the game.
   1. Shuffle the shrine cards.
   2. Arrange the shrine cards face down in a tableau consisting of three rows of nine cards each.
   3. Place the three country country cards below the tableau.
-     1. The Kida card should be placed below the second row of the tableau.
-     2. The Marus card should be placed below the fifth row of the tableau.
-     3. The Sorrell card should be placed below the eighth row of the tableau.
+     1. The Kida card should be placed below the second column of the tableau.
+     2. The Marus card should be placed below the fifth column of the tableau.
+     3. The Sorrell card should be placed below the eighth column of the tableau.
   4. Place the arcana cards to the sides of the tableau. The cards for the inactive arcana (the ones with an "X" through through the icon) should be placed on the left side of the tableau the cards for the active arcana should be placed on the right side of the tableau.
      1. The bell cards should be placed next to the top row of the tableau.
      2. The book cards should be placed next to the middle row of the tableau.
@@ -66,20 +66,19 @@ The players with the highest scores will win the game.
   7. Place one outcome card on top of each ritual card. Ensure that the icons on the ritual cards remain visible, they should "poke out" from underneath the outcome cards.
   8. Shuffle the character cards.
   9. Deal a random character card to each player.
-  10. Assign each player a color. Give each player the pawns and the player aide that matches their color.
+  10. Assign each player a color. Give each player the pawns and the player aide that match their color.
 
 ## Factions
-The three factions - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have come together to cast the ritual spell.
+Three factions of wizards - the Dragon Masters, the Eagle Lords, and the Wolf Mages - have come together to cast the ritual spell.
 They are also political rivals.
 Each faction has corrupted eight of the twenty-seven shrines.
 They will use these corrupted shrines to vie for control of the kingdom.
 
 ## Countries
-The three countries - Kida, Marus, and Sorrell - comprise the kingdom and are where the twenty-seven shrines are located.
+Three countries - Kida, Marus, and Sorrell - comprise the kingdom and are where the twenty-seven shrines are located.
 Nine shrines are in each country.
 
-When the ritual spell is cast, the factions will vie for control of the kingdom.
-Each country will be controlled by the faction with the most active shrines in that country.
+When the ritual spell is cast, each country will be controlled by the faction with the most active shrines in that country.
 If two or more of the factions are tied for the most active shrines in a country, then none of the factions will control that country.
 
 ## Regalia
@@ -157,9 +156,8 @@ The mapping between outcomes and how the arcana are used is changes from game to
 
 Each outcome is represented by an outcome card.
 Each way the arcana can be used is represented by a ritual card.
-The ritual cards should be arranged face up in a single row near the tableau.
-Each outcome card should be placed face down on top of a random ritual card.
-Ensure that the outcome cards do not obscure the icons on the underlying ritual cards.
+Each outcome is paired with a random ritual card.
+The outcome card specifies which ritual corresponds to which way the arcana are used.
 
 ### Casting the Ritual Spell
 At the beginning of the game, all of the outcome cards will be face down.
@@ -188,12 +186,13 @@ The supporters in a cultist's coat of arms indicate the faction that they belong
 ### The Monster
 The Monster has the ability to disguise itself as a wizard.
 If you are the Monster, then you can manipulate the shrines and the ritual cards as normal.
-The only practical difference between the Monster and a wizard or a cultist is that they have different objectives.
+The only mechanical difference between the Monster and a wizard or a cultist during the game is that they have different objectives.
 
 ## Playing the Game
 The player who has most recently performed a magic trick should take the first turn.
 
 On your turn you must either manipulate the shrines or advance the ritual spell.
+Each player must manipulate the shrines on their first turn.
 
 Play proceeds to the left (clockwise). That is, when you have finished your turn, the player to your left will take the next turn.
 
@@ -216,7 +215,7 @@ To advance the ritual spell, you must:
 The game ends immediately when the last ritual card is turned face up.
 
 ## Objectives
-There are four types of objectives that you (or others) may be trying to accomplish: controlling countries, claiming regalia, dominating the monster, or feeding the Monster.
+There are four types of objectives that you (or others) may be trying to accomplish: controlling countries, claiming regalia, dominating the monster, and feeding the Monster.
 
 ### Controlling Countries
 To control each country, you will need to ensure that your faction has the most active shrines in that country.
