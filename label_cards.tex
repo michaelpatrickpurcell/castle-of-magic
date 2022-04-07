@@ -1,187 +1,9 @@
 \documentclass[a4paper, oneside]{article}
+\usepackage{castle_of_magic}
 \usepackage[margin=0.125in]{geometry}
-\usepackage{calc}
 \usepackage[skip=0pt]{parskip}
 
-\usepackage[dvipsnames]{xcolor}
-\usepackage{tikz}
-\usepackage{booktabs}
-\usepackage{fontspec}
-\usepackage{contour}
-\contournumber{256}
-\contourlength{0.1cm}
-
-\input{coats_of_arms.tex}
-
 \setmainfont[Scale=3.0]{TeX Gyre Chorus}
-
-\definecolor{wolfblue}{HTML}{0038A8}
-\definecolor{dragongreen}{HTML}{008000}
-\definecolor{eaglered}{HTML}{A52A2A}
-\definecolor{kidagold}{HTML}{FFD700}
-\definecolor{arcanumpurple}{HTML}{800080}
-
-\colorlet{Arcanum}{wolfblue}
-\colorlet{Country}{Orange}
-\colorlet{Ritual}{kidagold}
-
-\newlength{\cardwidth}
-\newlength{\cardheight}
-\newlength{\bleed}
-\newlength{\horizspace}
-\newlength{\vertspace}
-\newlength{\vertdist}
-\newlength{\horizdist}
-
-\setlength{\cardwidth}{2.4in}
-\setlength{\cardheight}{3.4in}
-\setlength{\bleed}{0.125in}%0625in}
-\setlength{\horizspace}{0.0in}%625in}
-\setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
-\setlength{\vertspace}{0.0in}%625in}
-\setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
-
-\tikzset{guidecross/.pic={
-	\draw[#1] (-\bleed,0) -- (\bleed,0);
-	\draw[#1] (0, -\bleed) -- (0, \bleed);
-}}
-
-\tikzset{cutguide/.pic={
-	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross={#1}};
-	\pic () at (\cardwidth/2, \cardheight/2) {guidecross={#1}};
-	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross={#1}};
-	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross={#1}};
-}}
-
-\tikzset{wolf/.pic={
-\node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf_gray.png}};
-}}
-
-\tikzset{eagle/.pic={
-\node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle_brown.png}};
-}}
-
-\tikzset{dragon/.pic={
-\node () at (0,0) {\includegraphics[scale=1.5]{Images/dragon_purple.png}};
-}}
-
-\tikzset{crown/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
-}}
-
-\tikzset{scepter/.pic={
-\node[transform shape, rotate=45] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
-}}
-
-\tikzset{bell/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
-}}
-
-\tikzset{bell_off/.pic={
-\pic () at (0,0) {bell};
-\pic () at (0,0) {big_off};
-}}
-
-\tikzset{book/.pic={
-\node[transform shape, rotate=180] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
-}}
-
-\tikzset{book_off/.pic={
-\pic () at (0,0) {book};
-\pic () at (0,0) {big_off};
-}}
-
-\tikzset{candle/.pic={
-\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
-}}
-
-\tikzset{candle_off/.pic={
-\pic () at (0,0) {candle};
-\pic () at (0,0) {big_off};
-}}
-
-\tikzset{small_bell/.pic={
-\node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
-}}
-
-\tikzset{small_book/.pic={
-\node[transform shape, rotate=180, scale=0.33] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
-}}
-
-\tikzset{small_candle/.pic={
-\node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
-}}
-
-\tikzset{castle/.pic={
-\node () at (0,0) {\includegraphics[scale=2.5]{Images/castle.png}};
-}}
-
-\tikzset{off/.pic={
-	\draw[line width=0.1cm] (-0.75cm, -0.75cm) -- (0.75cm, 0.75cm);
-	\draw[line width=0.1cm] (-0.75cm, 0.75cm) -- (0.75cm, -0.75cm); 
-}}
-
-\tikzset{big_off/.pic={
-	\draw[line width=0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
-	\draw[line width=0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm); 
-}}
-
-\tikzset{cardbackprintable/.pic={
-	\begin{scope}
-	\clip (-\cardwidth/2 - \bleed, 0in) --%
-	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
-	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
-	      cycle;	
-	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
-\pic () at (0,0) {cardfill={#1}};
-\pic () at (0,0) {cutguide={black}};
-\pic () at (0, 0.25in) {castle};
-\pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
-\end{scope}
-}}
-
-\tikzset{cardfill/.pic={
-	\path[fill=#1] (-\cardwidth/2 - \bleed, 0in) --%
-	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
-	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
-	      cycle;
-}}
-
-\tikzset{arcanumcardfrontprintable/.pic={
-	\begin{scope}
-	\clip (-\cardwidth/2 - \bleed, 0in) --%
-	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
-	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
-	      cycle;
-		% Cutting guides for corners of the cards	
-	\pic () at (0,0) {cutguide={white}};
-	% Pattern for card front
-	\pic () at (0,0) {#1};
-\end{scope}
-}}
-
-\tikzset{countrycardfrontprintable/.pic={
-	\begin{scope}
-	\clip (-\cardwidth/2 - \bleed, 0in) --%
-	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
-	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
-	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
-	      cycle;
-		% Cutting guides for corners of the cards	
-	\pic () at (0,0) {cutguide={white}};
-	% Pattern for card front
-	\pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, 0) {coa={#1}};
-
-\end{scope}
-}}
-
 \pagestyle{empty}
 
 \begin{document}
@@ -205,19 +27,19 @@
 \setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in, transform shape]
-\pic () at (0,0in) {arcanumcardfrontprintable={bell}};
-\pic () at (\horizdist, 0) {arcanumcardfrontprintable={book}};
-\pic () at (2\horizdist, 0) {arcanumcardfrontprintable={candle}};
+\pic () at (0,0in) {cardfrontprintable={bell}};
+\pic () at (\horizdist, 0) {cardfrontprintable={book}};
+\pic () at (2\horizdist, 0) {cardfrontprintable={candle}};
 
-\pic () at (0, -\vertdist) {arcanumcardfrontprintable={bell_off}};
+\pic () at (0, -\vertdist) {cardfrontprintable={bell_off}};
 
-\pic () at (\horizdist, -\vertdist) {arcanumcardfrontprintable={book_off}};
+\pic () at (\horizdist, -\vertdist) {cardfrontprintable={book_off}};
 
-\pic () at (2\horizdist, -\vertdist) {arcanumcardfrontprintable={candle_off}};
+\pic () at (2\horizdist, -\vertdist) {cardfrontprintable={candle_off}};
 
-\pic () at (0, -2\vertdist) {countrycardfrontprintable={Kida}};
-\pic () at (\horizdist, -2\vertdist) {countrycardfrontprintable={Marus}};
-\pic () at (2\horizdist, -2\vertdist) {countrycardfrontprintable={Sorrell}};
+\pic () at (0, -2\vertdist) {cardfrontprintable=kida_coa_rotated};
+\pic () at (\horizdist, -2\vertdist) {cardfrontprintable={marus_coa_rotated}};
+\pic () at (2\horizdist, -2\vertdist) {cardfrontprintable={sorrell_coa_rotated}};
 
 \end{tikzpicture}	
 \end{center}

@@ -1,0 +1,362 @@
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+
+\usepackage{fontspec}
+
+\usepackage{contour}
+\contournumber{256}
+\contourlength{0.1cm}
+
+\usepackage{calc}
+
+% Define colors
+\definecolor{kidagold}{HTML}{FFD700}
+\definecolor{wolfblue}{HTML}{0038A8}
+\definecolor{eaglered}{HTML}{A52A2A}
+\definecolor{dragongreen}{HTML}{008000}
+\definecolor{hydrapurple}{HTML}{800080}
+\definecolor{paper}{HTML}{F1EBDB}
+
+\colorlet{Character}{Brown}
+\colorlet{Intrigue}{wolfblue}
+\colorlet{Ritual}{dragongreen}
+\colorlet{Arcanum}{wolfblue}
+\colorlet{Country}{Orange}
+\colorlet{Ritual}{White}
+\colorlet{Outcome}{dragongreen}
+\colorlet{Shrine}{hydrapurple}
+
+\tikzset{laurel/.pic={
+	\node[transform shape, scale=0.66] () at (0,0) {\includegraphics[scale=1.0]{Images/laurel.png}};
+}}
+
+\tikzset{dead/.pic={
+	\draw[line width = 0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
+	\draw[line width = 0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm);
+}}
+
+\tikzset{off/.pic={
+	\draw[line width=0.1cm] (-0.75cm, -0.75cm) -- (0.75cm, 0.75cm);
+	\draw[line width=0.1cm] (-0.75cm, 0.75cm) -- (0.75cm, -0.75cm); 
+}}
+
+\tikzset{big_off/.pic={
+	\draw[line width=0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
+	\draw[line width=0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm); 
+}}
+
+\tikzset{castle/.pic={
+	\node () at (0,0) {\includegraphics[scale=2.5]{Images/castle.png}};
+}}
+
+\tikzset{wolf/.pic={
+	\node () at (0,0) {\includegraphics[scale=1.33]{Images/wolf_gray.png}};
+}}
+
+\tikzset{eagle/.pic={
+	\node () at (0,0) {\includegraphics[scale=1.33]{Images/eagle_brown.png}};
+}}
+
+\tikzset{dragon/.pic={
+	\node () at (0,0) {\includegraphics[scale=1.5]{Images/dragon.png}};
+}}
+
+\tikzset{hydra/.pic={
+\node () at (0,0) {\includegraphics[scale=2.75]{Images/hydra.png}};
+}}
+
+\tikzset{small_hydra/.pic={
+\node () at (0,0) {\includegraphics[scale=2.0]{Images/hydra.png}};
+}}
+
+\tikzset{hydra_dead/.pic={
+	\pic () at (0,0) {hydra};
+	\pic () at (0, 0) {dead};
+}}
+
+\tikzset{crown/.pic={
+	\node () at (0,0) {\includegraphics[scale=0.4]{Images/crown.png}};
+}}
+
+\tikzset{crown_laurel/.pic={
+	\pic () at (0, 0) {laurel};
+	\pic[transform shape, scale=0.75] () at (0, 0) {crown};
+}}
+
+\tikzset{crown_dead/.pic={
+	\pic[transform shape, scale=0.75] () at (0, 0) {crown};
+	\pic () at (0, 0) {dead};
+}}
+
+\tikzset{amulet/.pic={
+	\node () at (0,0) {\includegraphics[scale=3.0]{Images/amulet.png}};
+}}
+
+\tikzset{amulet_laurel/.pic={
+	\pic () at (0, 0) {laurel};
+	\pic[transform shape, scale=0.75] () at (0, 0) {amulet};
+}}
+
+\tikzset{amulet_dead/.pic={
+	\pic[transform shape, scale=0.75] () at (0, 0) {amulet};
+	\pic () at (0, 0) {dead};
+}}
+
+\tikzset{scepter/.pic={
+	\node[transform shape, rotate=-22.5] () at (0,0) {\includegraphics[scale=0.55]{Images/scepter.png}};
+}}
+
+\tikzset{scepter_laurel/.pic={
+	\pic () at (0, 0) {laurel};
+	\pic[transform shape, scale=0.66] () at (0, 0) {scepter};
+}}
+
+\tikzset{scepter_dead/.pic={
+	\pic[transform shape, scale=0.66] () at (0, 0) {scepter};
+	\pic () at (0, 0) {dead};
+}}
+
+\tikzset{bell/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
+}}
+
+\tikzset{bell_off/.pic={
+\pic () at (0,0) {bell};
+\pic () at (0,0) {big_off};
+}}
+
+\tikzset{book/.pic={
+\node[transform shape, rotate=180] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
+}}
+
+\tikzset{book_off/.pic={
+\pic () at (0,0) {book};
+\pic () at (0,0) {big_off};
+}}
+
+\tikzset{candle/.pic={
+\node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
+}}
+
+\tikzset{candle_off/.pic={
+\pic () at (0,0) {candle};
+\pic () at (0,0) {big_off};
+}}
+
+\tikzset{small_bell/.pic={
+\node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
+}}
+
+\tikzset{small_book/.pic={
+\node[transform shape, rotate=180, scale=0.33] () at (0,0) {\includegraphics[scale=0.5]{Images/book.png}};
+}}
+
+\tikzset{small_candle/.pic={
+\node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
+}}
+
+\tikzset{shield/.pic={
+	\draw[ultra thick] (0, 0cm) -- (0, 3cm) -- (9cm, 3cm) -- (9cm, 0cm) arc (0:-60:9cm) arc (240:180:9cm);
+}}
+
+\tikzset{Sorrell/.pic={
+	\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	
+	\draw[thick, fill=eaglered] (0, -2cm) -- (4.5cm, -2cm) -- (4.5cm, 3cm) -- (0, 3cm) -- cycle;
+	\draw[thick, fill=white] (9cm, -2cm) -- (4.5cm,-2cm) -- (4.5cm, 3cm) -- (9cm,3cm) -- cycle;
+	\draw[thick, fill=white] (0,-2cm) -- (4.5cm, -2cm) -- (4.5cm, -9) -- (0,-9cm) -- cycle;
+	\draw[thick, fill=eaglered] (9cm, -2cm) -- (4.5cm, -2cm) -- (4.5cm, -9cm) -- (9cm,-9cm) -- cycle;
+
+\end{scope}
+}}
+
+\tikzset{Marus/.pic={
+\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+
+	\fill[wolfblue] (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	\draw[thick, fill=White] (0, 1cm) -- (0, 3cm) -- (2cm, 3cm) -- (14cm, -9cm) -- (14cm, -11cm) -- (12cm, -11cm) -- cycle;
+
+\end{scope}
+}}
+
+\tikzset{Kida/.pic={
+\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	
+	\fill[kidagold] (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	\draw[ultra thick, fill=black] (2cm, 3cm) -- (7cm, 3cm) -- (4.5cm, -8cm) -- cycle;
+
+\end{scope}
+}}
+
+\tikzset{Argent/.pic={
+\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	
+	\fill[White] (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+\end{scope}
+}}
+
+\tikzset{Monster/.pic={
+\begin{scope}
+	\clip (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	
+	\fill[White] (0,0cm) -- (0,3cm) -- (9cm,3cm) -- (9cm,0cm) arc (0:-60:9cm) arc (240:180:9cm);
+	\node () at (4.5cm, -1.5cm) {\includegraphics[scale=3.5]{Images/hydra.png}};
+\end{scope}
+}}
+
+\tikzset{coa/.pic={
+	\pic () at (0,0) {ribbon={#1}};
+	\pic () at (0,8cm) {#1};
+	\pic () at (0,8cm) {shield};
+}}
+
+\tikzset{kida_coa_rotated/.pic={
+	\pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, 0) {coa={Kida}};
+}}
+
+\tikzset{marus_coa_rotated/.pic={
+	\pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, 0) {coa={Marus}};
+}}
+
+\tikzset{sorrell_coa_rotated/.pic={
+	\pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, 0) {coa={Sorrell}};
+}}
+
+% Define the card templates
+\newlength{\cardwidth}
+\newlength{\cardheight}
+\newlength{\bleed}
+\newlength{\horizspace}
+\newlength{\vertspace}
+\newlength{\vertdist}
+\newlength{\horizdist}
+
+\setlength{\cardwidth}{2.4in}
+\setlength{\cardheight}{3.4in}
+\setlength{\bleed}{0.125in}
+\setlength{\horizspace}{0.0in}
+\setlength{\horizdist}{\cardwidth + 2\bleed + \horizspace}
+\setlength{\vertspace}{0.0in}
+\setlength{\vertdist}{\cardheight + 2\bleed + \vertspace}
+
+\tikzset{guidecross/.pic={
+	\draw[#1] (-\bleed,0) -- (\bleed,0);
+	\draw[#1] (0, -\bleed) -- (0, \bleed);
+}}
+
+\tikzset{cutguide/.pic={
+	\pic () at (-\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, \cardheight/2) {guidecross={#1}};
+	\pic () at (-\cardwidth/2, -\cardheight/2) {guidecross={#1}};
+	\pic () at (\cardwidth/2, -\cardheight/2) {guidecross={#1}};
+}}
+
+\tikzset{cardfill/.pic={
+	\path[fill=#1] (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+}}
+
+\tikzset{cardbackprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
+	\pic () at (0,0) {cardfill={#1}};
+	\pic () at (0,0) {cutguide={black}};
+	\pic () at (0, 0.25in) {castle};
+	\pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
+	\end{scope}
+}}
+
+\tikzset{cardfrontprintable/.pic={
+	\begin{scope}
+	\clip (-\cardwidth/2 - \bleed, 0in) --%
+	      (-\cardwidth/2 - \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, \cardheight/2 + \bleed) --%
+	      (\cardwidth/2 + \bleed, -\cardheight/2 - \bleed) --%
+	      (-\cardwidth/2 - \bleed, -\cardheight/2 - \bleed) --%
+	      cycle;
+	% Pattern for card front
+	\pic () at (0,0) {#1};
+	% Cutting guides for corners of the cards	
+	\pic () at (0,0) {cutguide={white}};
+	\end{scope}
+}}
+
+% Define the ribbon template
+\newlength\myrblen
+\newlength\myrbht
+\newlength\myrbarc
+\setlength\myrblen{1cm}
+\setlength\myrbht{1.1cm}
+\setlength\myrbarc{0.1cm}
+
+\tikzset{ribbon/.pic={%
+\path
+  (0,0) --
+  ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
+  ++(0,-\myrbarc) --
+  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
+  ++(0,- \myrbarc) --
+  ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
+  ++(0, \myrbarc) --
+  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux4)
+  ++(0, \myrbarc) --
+  ++(3\myrblen,0) --
+  ++(-0.5\myrbht,-0.5\myrbht) --
+  ++(0.5\myrbht,-0.5\myrbht) --
+  ++(-9\myrblen,0) --
+  ++(0.5\myrbht,0.5\myrbht) --
+  ++(-0.5\myrbht,0.5\myrbht) --
+    cycle;
+\draw[thick, fill=paper!75!black]
+  (aux1) -- ++(0,-0.5\myrbht) coordinate (aux7) -- (aux2|-aux7) -- (aux2|-aux1) -- cycle;  
+\draw[thick, fill=paper!75!black]
+  (aux4) -- ++(0,-0.5\myrbht) coordinate (aux8) -- (aux3|-aux8) -- (aux3|-aux4) -- cycle;  
+\draw[thick,fill=paper]
+  (0,0) --
+  ++(3\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux1)
+  ++(0,-\myrbarc) --
+  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux2)
+  ++(0,- \myrbarc) --
+  ++(5\myrblen,0) to[out=0,in=0,looseness=3] coordinate[midway] (aux3)
+  ++(0, \myrbarc) --
+  ++(-\myrblen,0) to[out=180,in=180,looseness=3] coordinate[midway] (aux4)
+  ++(0, \myrbarc) --
+  ++(3\myrblen,0) --
+  ++(-0.5\myrbht,-0.5\myrbht) --
+  ++(0.5\myrbht,-0.5\myrbht) --
+  ++(-9\myrblen,0) --
+  ++(0.5\myrbht,0.5\myrbht) --
+  ++(-0.5\myrbht,0.5\myrbht) --
+   cycle;
+\path
+  (aux2) {[rounded corners=1.5pt] -- 
+  ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) -- 
+  (aux3|-aux5)} -- 
+  (aux3);
+\fill[paper]
+  ([yshift=-\myrbarc]aux2) {[rounded corners=1.5pt] -- 
+  ++(0,\dimexpr-\myrbht-0.5\myrbarc\relax) -- 
+  (aux3|-aux5)} -- 
+  ([yshift=-\myrbarc]aux3);
+\draw[thick]
+  (aux2) {[rounded corners=1.5pt] -- 
+  ++(0,\dimexpr-\myrbht-1.5\myrbarc\relax) coordinate (aux5) --  
+  (aux3|-aux5)} -- 
+  (aux3);
+  
+\node[inner sep=0pt] () at (4.5\myrblen, -2.5\myrbarc - 0.5\myrbht) {#1};
+}}
