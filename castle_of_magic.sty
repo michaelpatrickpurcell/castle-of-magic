@@ -61,6 +61,7 @@
 	\node () at (0,0) {\includegraphics[scale=1.5]{Images/dragon.png}};
 }}
 
+% Outcome card faces
 \tikzset{hydra/.pic={
 \node () at (0,0) {\includegraphics[scale=2.75]{Images/hydra.png}};
 }}
@@ -116,6 +117,7 @@
 	\pic () at (0, 0) {dead};
 }}
 
+% Arcanum card faces
 \tikzset{bell/.pic={
 \node[transform shape, rotate=90] () at (0,0) {\includegraphics[scale=1.15]{Images/bell.png}};
 }}
@@ -155,6 +157,69 @@
 \node[transform shape, rotate=90, scale=0.33] () at (0,0) {\includegraphics[scale=0.4]{Images/candle.png}};
 }}
 
+% Composite pictures for ritual cards
+\tikzset{ringing_open_lit/.pic={
+	\pic () at (-0.75in, 1.25in) {small_bell};
+	\pic () at (0in, 1.25in) {small_book};
+	\pic () at (0.75in, 1.25in) {small_candle};
+	\pic () at (-0.75in, -1.25in) {small_bell};
+	\pic () at (0in, -1.25in) {small_book};
+	\pic () at (0.75in, -1.25in) {small_candle};
+}}
+
+\tikzset{ringing_closed_unlit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (0in, 1.25in) {off};
+	\pic () at (0.75in, 1.25in) {off};
+	\pic () at (0in, -1.25in) {off};
+	\pic () at (0.75in, -1.25in) {off};
+}}
+
+\tikzset{silent_open_unlit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (-0.75in, 1.25in) {off};
+	\pic () at (0.75in, 1.25in) {off};
+	\pic () at (-0.75in, -1.25in) {off};
+	\pic () at (0.75in, -1.25in) {off};
+}}
+
+\tikzset{silent_closed_lit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (-0.75in, 1.25in) {off};
+	\pic () at (0in, 1.25in) {off};
+	\pic () at (-0.75in, -1.25in) {off};
+	\pic () at (0in, -1.25in) {off};
+}}
+
+\tikzset{silent_closed_unlit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (-0.75in, 1.25in) {off};
+	\pic () at (0in, 1.25in) {off};
+	\pic () at (0.75in, 1.25in) {off};
+	\pic () at (-0.75in, -1.25in) {off};
+	\pic () at (0in, -1.25in) {off};
+	\pic () at (0.75in, -1.25in) {off};
+}}
+
+\tikzset{silent_open_lit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (-0.75in, 1.25in) {off};
+	\pic () at (-0.75in, -1.25in) {off};
+}}
+
+\tikzset{ringing_closed_lit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (0in, 1.25in) {off};
+	\pic () at (0in, -1.25in) {off};
+}}
+
+\tikzset{ringing_open_unlit/.pic={
+	\pic () at (0,0) {ringing_open_lit};
+	\pic () at (0.75in, 1.25in) {off};
+	\pic () at (0.75in, -1.25in) {off};
+}}
+
+% Stuff for character cards
 \tikzset{shield/.pic={
 	\draw[ultra thick] (0, 0cm) -- (0, 3cm) -- (9cm, 3cm) -- (9cm, 0cm) arc (0:-60:9cm) arc (240:180:9cm);
 }}
@@ -224,6 +289,85 @@
 
 \tikzset{sorrell_coa_rotated/.pic={
 	\pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, 0) {coa={Sorrell}};
+}}
+
+% Composite pictures for character cards
+\tikzset{dragon_supporters/.pic={
+	\pic[scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon};
+	\pic[xscale=-1, scale=0.66, xshift=-3.6cm, yshift=0.4cm] () at (0,0) {dragon}; 
+}}
+
+\tikzset{wolf_supporters/.pic={
+	\pic[scale=0.66, xshift=3.3cm] () at (0, 0) {wolf};
+	\pic[xscale=-1, scale=0.66, xshift=3.3cm] () at (0, 0) {wolf}; 
+}}
+
+\tikzset{eagle_supporter/.pic={
+	\pic[yscale=1.0, xscale=1.25, yshift=0cm] () at (0, 0) {eagle};
+}}
+
+\tikzset{dragon_kida/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Kida}};
+	\pic[rotate=90] () at (0,0) {dragon_supporters};
+}}
+
+\tikzset{dragon_marus/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Marus}};
+	\pic[rotate=90] () at (0,0) {dragon_supporters};
+}}
+
+\tikzset{dragon_sorrell/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Sorrell}};
+	\pic[rotate=90] () at (0,0) {dragon_supporters};
+}}
+
+\tikzset{wolf_kida/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Kida}};
+	\pic[rotate=90] () at (0,0) {wolf_supporters};
+}}
+
+\tikzset{wolf_marus/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Marus}};
+	\pic[rotate=90] () at (0,0) {wolf_supporters};
+}}
+
+\tikzset{wolf_sorrell/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Sorrell}};
+	\pic[rotate=90] () at (0,0) {wolf_supporters};
+}}
+
+\tikzset{eagle_kida/.pic={
+	\pic[rotate=90] () at (0,0) {eagle_supporter};
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Kida}};
+}}
+
+\tikzset{eagle_marus/.pic={
+	\pic[rotate=90] () at (0,0) {eagle_supporter};
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Marus}};
+}}
+
+\tikzset{eagle_sorrell/.pic={
+	\pic[rotate=90] () at (0,0) {eagle_supporter};
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Sorrell}};
+}}
+
+\tikzset{dragon_monster/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Monster}};
+	\pic[rotate=90] () at (0,0) {dragon_supporters};
+}}
+
+\tikzset{wolf_monster/.pic={
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Monster}};
+	\pic[rotate=90] () at (0,0) {wolf_supporters};
+}}
+
+\tikzset{eagle_monster/.pic={
+	\pic[rotate=90] () at (0,0) {eagle_supporter};
+	\pic[rotate=90, scale=0.3, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {coa={Monster}};
+}}
+
+\tikzset{monster_character/.pic={
+	\pic[rotate=90] () at (0,0) {hydra};
 }}
 
 % Define the card templates
