@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{castle_of_magic}
+\usepackage[margin=0.125in]{geometry}
+\usepackage[skip=0pt]{parskip}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+\tikzset{player_aid_frame/.pic={
+	\fill[even odd rule, #1] (-\cardwidth/2 - \bleed, -\cardheight/2-\bleed) rectangle (\cardwidth/2+\bleed, \cardheight/2+\bleed)
+(-\cardwidth/2 + 2\bleed, -\cardheight/2 + 2\bleed) rectangle (\cardwidth/2 - 2\bleed, \cardheight/2 - 2\bleed);
+}}
+
+\tikzset{player_aid_scoring/.pic={
+\node[minimum height=\cardheight-6\bleed, text width=\cardwidth-6\bleed, inner sep=0pt] () at (0,0) {
+{\large Wizard}
+\vspace{0.15em}
+{\setmainfont{Charter}\scriptsize
+\begin{itemize}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=1.5\bleed]
+	\item 1000 points for every country your faction controls.
+	\item 1000 points for your faction controlling your home country.
+	\item 1000 points for every piece of regalia you claim.
+	\item 1000 points for dominating the~Monster.
+\end{itemize}
+}
+\vspace{1em}
+{\large Cultist}
+%\vspace{0.125cm}
+{\setmainfont{Charter}\scriptsize
+\begin{itemize}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=1.5\bleed]
+	\item 1000 points for every country your faction controls.
+	\item 1000 points for every piece of regalia you claim.
+	\item 1000 points for feeding the~Monster.
+\end{itemize}
+}
+\vspace{1em}
+{\large The Monster}
+%\vspace{0.125cm}
+{\setmainfont{Charter}\scriptsize
+\begin{itemize}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=1.5\bleed]
+	\item 6000 points for devouring at least one wizard or cultist.
+\end{itemize}
+}
+};
+}}
+
+
+\tikzset{player_aid_turns/.pic={
+\node[minimum height=\cardheight-6\bleed, text width=\cardwidth-6\bleed, inner sep=0pt] () at (0,0.1cm) {
+
+{\large Playing the Game}
+
+{\setmainfont{Charter}\scriptsize
+\begin{description}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=0pt, labelsep=0.75ex, itemindent=0pt]
+	\item On your turn you must either manipulate the shrines or advance the ritual spell.
+\end{description}
+}
+
+\vspace{0.25em}
+
+{\large Manipulate the Shrines}
+
+{\setmainfont{Charter}\scriptsize
+\begin{description}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=0pt, labelsep=0.75ex, itemindent=0pt]
+	\item Pick up one or more of your pawns.
+	\vspace{-0.75em}
+	\item For each pawn that you picked up you must:
+	\begin{enumerate}[leftmargin=\widthof{(a)t}, itemsep=0.06125cm]
+		\item Flip one shrine card that does not have a pawn on it.
+		\item Place a pawn on the card that you flipped.
+	\end{enumerate}
+\end{description}
+}
+
+\vspace{0.25em}
+
+{\large Advance the Ritual Spell}
+
+{\setmainfont{Charter}\scriptsize
+\begin{description}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=0.0\bleed, labelsep=0.75ex, itemindent=0pt]
+	\item Flip one of the face down outcome cards so that it is face up.
+	\vspace{0.125cm}
+	\item The game ends when the last outcome card is turned face up.
+\end{description}
+}
+};
+}}
+
+\setmainfont[Scale=3.0]{TeX Gyre Chorus}
+\pagestyle{empty}
+
+\begin{document}
+\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=1.0]{TeX Gyre Chorus}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {player_aid_frame={kidagold}};
+\pic () at (0,0) {cutguide={black}};
+\pic () at (0,0) {player_aid_scoring};
+
+\pic () at (0,-\vertdist) {player_aid_frame={hydrapurple}};
+\pic () at (0,-\vertdist) {cutguide={black}};
+\pic () at (0,-\vertdist) {player_aid_turns};
+\end{tikzpicture}
+\end{center}
+\end{document}
