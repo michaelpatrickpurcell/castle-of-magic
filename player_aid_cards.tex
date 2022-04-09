@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper, oneside]{article}
 \usepackage{castle_of_magic}
 \usepackage[margin=0.125in]{geometry}
 \usepackage[skip=0pt]{parskip}
@@ -11,6 +11,7 @@
 }}
 
 \tikzset{player_aid_scoring/.pic={
+\pic () at (0,0) {player_aid_frame={#1}};
 \node[minimum height=\cardheight-6\bleed, text width=\cardwidth-6\bleed, inner sep=0pt] () at (0,0) {
 {\large Wizard}
 \vspace{0.15em}
@@ -45,6 +46,8 @@
 
 
 \tikzset{player_aid_turns/.pic={
+\pic () at (0,0) {player_aid_frame={#1}};
+
 \node[minimum height=\cardheight-6\bleed, text width=\cardwidth-6\bleed, inner sep=0pt] () at (0,0.1cm) {
 
 {\large Playing the Game}
@@ -89,16 +92,43 @@
 \pagestyle{empty}
 
 \begin{document}
-\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=1.0]{TeX Gyre Chorus}
+\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}%\setmainfont[Scale=3.0]{TeX Gyre Chorus}
 \begin{center}
 \begin{tikzpicture}[x=1in, y=1in]
-\pic () at (0,0) {player_aid_frame={kidagold}};
+%\pic () at (0,0) {cutguide={black}};
+\pic () at (0,0) {player_aid_scoring={eaglered}};
 \pic () at (0,0) {cutguide={black}};
-\pic () at (0,0) {player_aid_scoring};
+\pic () at (\horizdist,0) {player_aid_scoring={Orange}};
+\pic () at (\horizdist,0) {cutguide={black}};
+\pic () at (2\horizdist,0) {player_aid_scoring={kidagold}};
+\pic () at (2\horizdist,0) {cutguide={black}};
 
-\pic () at (0,-\vertdist) {player_aid_frame={hydrapurple}};
+\pic () at (0,-\vertdist) {player_aid_scoring={dragongreen}};
 \pic () at (0,-\vertdist) {cutguide={black}};
-\pic () at (0,-\vertdist) {player_aid_turns};
+\pic () at (\horizdist,-\vertdist) {player_aid_scoring={wolfblue}};
+\pic () at (\horizdist,-\vertdist) {cutguide={black}};
+\pic () at (2\horizdist,-\vertdist) {player_aid_scoring={hydrapurple}};
+\pic () at (2\horizdist,-\vertdist) {cutguide={black}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}%\setmainfont[Scale=3.0]{TeX Gyre Chorus}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in, transform shape]
+\pic () at (0,0) {player_aid_turns={kidagold}};
+\pic () at (0,0) {cutguide={kidagold}};
+\pic () at (\horizdist, 0) {player_aid_turns={Orange}};
+\pic () at (\horizdist, 0) {cutguide={Orange}};
+\pic () at (2\horizdist, 0) {player_aid_turns={eaglered}};
+\pic () at (2\horizdist, 0) {cutguide={eaglered}};
+
+\pic () at (0,-\vertdist) {player_aid_turns={hydrapurple}};
+\pic () at (0,-\vertdist) {cutguide={hydrapurple}};
+\pic () at (\horizdist, -\vertdist) {player_aid_turns={wolfblue}};
+\pic () at (\horizdist, -\vertdist) {cutguide={wolfblue}};
+\pic () at (2\horizdist, -\vertdist) {player_aid_turns={dragongreen}};
+\pic () at (2\horizdist, -\vertdist) {cutguide={dragongreen}};
+
 \end{tikzpicture}
 \end{center}
 \end{document}
