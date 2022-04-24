@@ -4,6 +4,7 @@
 
 \usepackage{array}
 \usepackage{enumitem}
+\usepackage{multicol}
 
 \usepackage{eso-pic}
 \usepackage[skins]{tcolorbox} % Add background image to tikz node in color cover
@@ -71,10 +72,17 @@
 \contour{black}{\textcolor{WildStrawberry}{of}}
 
 \contour{black}{\textcolor{WildStrawberry}{Magic}}
-\vfill
+\vspace{0.25cm}
 \contourlength{0.4pt}
 \center \large \contour{black}{\textcolor{WildStrawberry}{The Card Game}}
-\phantom{a}
+\vfill
+\setmainfont{Charter}
+\contourlength{0.4pt}
+\begin{center}
+\Large Designed by Michael Purcell
+\end{center}
+%\center \contour{black}{\textcolor{WildStrawberry}{Designed  by Michael Purcell}}
+%\phantom{a}
 \AddToShipoutPictureBG*{
 	\begin{tikzpicture}[remember picture, overlay]
 		\draw[fill overzoom image=Images/blue_stone_wall_vector.png]  (current page.south west) rectangle (current page.north east);
@@ -642,14 +650,6 @@ To dominate the Monster, you must first claim a piece of regalia. Then, you must
 \subsection*{Feeding the Monster}
 To feed the Monster, you must ensure that the outcome of the ritual spell indicates that the Monster devours at least one character.
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}
-	\pic[scale=0.75, transform shape] () at (0,0) {castle};
-\end{tikzpicture}
-\caption*{Castle Bondi}
-\end{figure}
-
 \newpage
 
 \section*{Scoring}
@@ -685,21 +685,63 @@ The Monster can claim regalia but will not score points for doing so. The Monste
 
 \newpage
 
-\section*{Acknowledgements}
-Castle of Magic: The Card Game is a modern reimagining of a classic board game of magic and intrigue.
+\section*{Playtesters}
+The design of Castle of Magic: The Card Game has been vastly improved by the feedback provided by the following playtesters throughout the design process:
+\begin{multicols}{2}
+\begin{itemize}%[nosep]
+\item Dannielle Harden
+\item Luke Purcell
+\item Kira Purcell
+\item Farzana Choudhury
+\item Keydan Bruce
+\item Brett Witty
+\end{itemize}
+\end{multicols}
+
+\section*{Design Tools}
+The following tools were used to create the art, layout, and graphic design for this game:
+\begin{description}[font=\normalfont\textbullet\space, nosep]
+	\item[LuaLaTeX:] Typesetting and layout.
+	\item[TikZ:] Diagrams and art.
+	\item[GIMP:] Image manipulation.
+\end{description}
+\vspace{1ex}
+The fonts used in this booklet are Charter and TeX Gyre Chorus.
+
+The art used throughout the game was adapted from illustrations by d3verro.
+
+\newpage
+
+\section*{Disclaimer}
+This game is a modern reimagining of a classic board game of magic and intrigue.
 
 The original Castle of Magic game was designed by Rick Smith and published by Cloud Kingdom Games (n\'ee RiddleMaster Games) in 1991. 
 
 It was later augmented by two expansions: The Castle Cursed in 1992 and The Fall of Castle Bondi (which includes a reprint of the earlier expansion) in 2002.
 
-This game was designed by Michael Purcell. It is an attempt to maintain the flavor of the original while simplifying it for a much more streamlined experience.  
+Castle of Magic: The Card Game was designed by Michael Purcell. It is an original design that aims to maintain the flavor of the original while simplifying it for a more streamlined experience.  
 
 Rick Smith holds all rights to Castle of Magic, and this work has been made available for print-and-play and low-volume print-on-demand with his permission. 
 
-%\doclicenseText
 \vfill
 
 \begin{tabular}{@{}m{\textwidth-\widthof{\Huge{\doclicenseIcon}}}@{\hspace*{0.5cm}}m{\widthof{\Huge{\doclicenseIcon}}-0.5cm}@{}}
 \footnotesize{\doclicenseText} & \huge{\doclicenseIcon} \\
 \end{tabular}
+
+\newpage
+
+\AddToShipoutPictureBG*{
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[fill overzoom image=Images/blue_stone_wall_vector.png]  (current page.south west) rectangle (current page.north east);
+	\end{tikzpicture}
+}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}
+	\pic[scale=1.55, transform shape] () at (0,0) {castle};
+\end{tikzpicture}
+%\caption*{Castle Bondi: The Castle of Magic}
+\end{figure}
+
 \end{document}
