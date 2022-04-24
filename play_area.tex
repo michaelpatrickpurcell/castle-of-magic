@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage{castle_of_magic}
+
+\definecolor{lightbluestone}{HTML}{f3f7fd}
+
+\begin{document}
+
+\begin{tikzpicture}[x=1in, y=1in]
+\path[fill=lightbluestone] (-20, -15) -- (-20, 9) -- (20,9) -- (20, -15) -- cycle;
+
+\foreach \i in {-12, -9, ..., 12}
+	\foreach \j in {0, -4, -8}
+		\pic () at (\i,\j) {cardbackdisplay={Shrine}};
+
+	\pic[rotate=-90, transform shape] () at (-15.5, 5) {cardfrontdisplay={silent_closed_unlit}};
+	\pic[rotate=-90, transform shape] () at (-11.5, 5) {cardfrontdisplay={silent_closed_lit}};
+
+	\pic[rotate=-90, transform shape] () at (-6.5, 5) {cardfrontdisplay={silent_open_unlit}};
+	\pic[rotate=-90, transform shape] () at (-2.5, 5) {cardfrontdisplay={silent_open_lit}};
+	
+	\pic[rotate=-90, transform shape] () at (2.5, 5) {cardfrontdisplay={ringing_closed_unlit}};
+	\pic[rotate=-90, transform shape] () at (6.5, 5) {cardfrontdisplay={ringing_closed_lit}};
+
+	\pic[rotate=-90, transform shape] () at (11.5, 5) {cardfrontdisplay={ringing_open_unlit}};
+	\pic[rotate=-90, transform shape] () at (15.5, 5) {cardfrontdisplay={ringing_open_lit}};
+
+\foreach \i in {-15, -12, -6, -3, 3, 6, 12, 15} {
+	\pic () at (\i, 5) {cardbackdisplay={Outcome}};
+}
+	
+\pic[rotate=-90, transform shape] () at (-16, 0) {cardfrontdisplay={bell_off}};
+\pic[rotate=-90, transform shape] () at (-16, -4) {cardfrontdisplay={book_off}};
+\pic[rotate=-90, transform shape] () at (-16, -8) {cardfrontdisplay={candle_off}};
+
+\pic[rotate=-90, transform shape] () at (16, 0) {cardfrontdisplay={bell}};
+\pic[rotate=-90, transform shape] () at (16, -4) {cardfrontdisplay={book}};
+\pic[rotate=-90, transform shape] () at (16, -8) {cardfrontdisplay={candle}};
+
+\setmainfont[Scale=1.125]{Tex Gyre Chorus}
+\pic () at (-9, -12) {countrycardfrontdisplay={Kida}};
+\pic () at (0, -12) {countrycardfrontdisplay={Marus}};
+\pic () at (9, -12) {countrycardfrontdisplay={Sorrell}};
+
+\end{tikzpicture}
+
+\end{document}

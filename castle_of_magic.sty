@@ -9,6 +9,9 @@
 
 \usepackage{calc}
 
+\usepackage{enumitem}
+\usepackage{setspace}
+
 % Define colors
 \definecolor{kidagold}{HTML}{FFD700}
 \definecolor{wolfblue}{HTML}{0038A8}
@@ -31,8 +34,9 @@
 }}
 
 \tikzset{dead/.pic={
-	\draw[line width = 0.3cm] (-2.25cm, -2.25cm) -- (2.25cm, 2.25cm);
-	\draw[line width = 0.3cm] (-2.25cm, 2.25cm) -- (2.25cm, -2.25cm);
+	\fill[black] (-2.35cm, -2.15cm) -- (2.15cm, 2.35cm) -- (2.35cm, 2.15cm) -- (-2.15cm, -2.35cm) -- cycle;
+	\fill[black] (-2.15cm, 2.35cm) -- (2.35cm, -2.15cm) -- (2.15cm, -2.35cm) -- (-2.35cm, 2.15cm) -- cycle;
+
 }}
 
 \tikzset{off/.pic={
@@ -279,6 +283,11 @@
 	\pic () at (0,8cm) {shield};
 }}
 
+\tikzset{simplecoa/.pic={
+	\pic () at (0,8cm) {#1};
+	\pic () at (0,8cm) {shield};
+}}
+
 \tikzset{kida_coa_rotated/.pic={
 	\pic[rotate=90, scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0, 0) {coa={Kida}};
 }}
@@ -424,6 +433,27 @@
 	\end{scope}
 }}
 
+\tikzset{cardbackdisplay/.pic={
+	\begin{scope}
+	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
+	\node[minimum height=3.5in, minimum width=2.5in, draw, very thick, rounded corners=0.125in, inner sep=0pt, fill=#1] () at (0,0) {};
+%	\pic () at (0,0) {cardfill={#1}};
+	\pic () at (0, 0.25in) {castle};
+	\pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
+	\end{scope}
+}}
+
+\tikzset{cardbackdisplaysmall/.pic={
+	\begin{scope}
+	\setmainfont[Scale=1.5]{TeX Gyre Chorus}
+	\node[minimum height=3.5in, minimum width=2.5in, draw, ultra thin, rounded corners = 0.0125in, inner sep=0pt, fill=#1] () at (0,0) {};
+%	\pic () at (0,0) {cardfill={#1}};
+	\pic () at (0, 0.25in) {castle};
+	\pic[scale=0.5] at (-2.25cm, -1.15in) {ribbon={#1}};
+	\end{scope}
+}}
+
+
 \tikzset{cardfrontprintable/.pic={
 	\begin{scope}
 	\clip (-\cardwidth/2 - \bleed, 0in) --%
@@ -438,6 +468,29 @@
 	\pic () at (0,0) {cutguide={white}};
 	\end{scope}
 }}
+
+\tikzset{cardfrontdisplay/.pic={
+	\begin{scope}	      
+	\node[minimum height=3.5in, minimum width=2.5in, draw, very thick, rounded corners=0.125in, inner sep=0pt, fill=white] () at (0,0) {};
+	% Pattern for card front
+	\pic () at (0,0) {#1};
+	% Cutting guides for corners of the cards	
+%	\pic () at (0,0) {cutguide={white}};
+	\end{scope}
+}}
+
+\tikzset{countrycardfrontdisplay/.pic={
+	\begin{scope}	      
+	\node[minimum height=3.5in, minimum width=2.5in, draw, very thick, rounded corners=0.125in, inner sep=0pt, fill=white, rotate=90] () at (0,0) {};
+	% Pattern for card front
+	\pic[scale=0.375, xshift=-4.5cm, yshift=-4.8cm, transform shape] () at (0,0) {simplecoa={#1}};
+	\pic[scale=0.375, xshift=-4.5cm, yshift=-4.8cm] () at (0,0) {ribbon={#1}};
+
+	% Cutting guides for corners of the cards	
+%	\pic () at (0,0) {cutguide={white}};
+	\end{scope}
+}}
+
 
 % Define the ribbon template
 \newlength\myrblen
@@ -503,4 +556,139 @@
   (aux3);
   
 \node[inner sep=0pt] () at (4.5\myrblen, -2.5\myrbarc - 0.5\myrbht) {#1};
+}}
+
+
+\tikzset{play_area/.pic={
+\path (-20, -15) -- (20, 9);
+\foreach \i in {-12, -9, ..., 12}
+	\foreach \j in {0, -4, -8}
+		\pic () at (\i,\j) {cardbackdisplay={Shrine}};
+
+	\pic[rotate=-90, transform shape] () at (-15.5, 5) {cardfrontdisplay={silent_closed_unlit}};
+	\pic[rotate=-90, transform shape] () at (-11.5, 5) {cardfrontdisplay={silent_closed_lit}};
+
+	\pic[rotate=-90, transform shape] () at (-6.5, 5) {cardfrontdisplay={silent_open_unlit}};
+	\pic[rotate=-90, transform shape] () at (-2.5, 5) {cardfrontdisplay={silent_open_lit}};
+	
+	\pic[rotate=-90, transform shape] () at (2.5, 5) {cardfrontdisplay={ringing_closed_unlit}};
+	\pic[rotate=-90, transform shape] () at (6.5, 5) {cardfrontdisplay={ringing_closed_lit}};
+
+	\pic[rotate=-90, transform shape] () at (11.5, 5) {cardfrontdisplay={ringing_open_unlit}};
+	\pic[rotate=-90, transform shape] () at (15.5, 5) {cardfrontdisplay={ringing_open_lit}};
+
+\foreach \i in {-15, -12, -6, -3, 3, 6, 12, 15} {
+	\pic () at (\i, 5) {cardbackdisplay={Outcome}};
+}
+	
+\pic[rotate=-90, transform shape] () at (-16, 0) {cardfrontdisplay={bell_off}};
+\pic[rotate=-90, transform shape] () at (-16, -4) {cardfrontdisplay={book_off}};
+\pic[rotate=-90, transform shape] () at (-16, -8) {cardfrontdisplay={candle_off}};
+
+\pic[rotate=-90, transform shape] () at (16, 0) {cardfrontdisplay={bell}};
+\pic[rotate=-90, transform shape] () at (16, -4) {cardfrontdisplay={book}};
+\pic[rotate=-90, transform shape] () at (16, -8) {cardfrontdisplay={candle}};
+
+\pic[rotate=-90, transform shape] () at (-9, -12) {cardfrontdisplay={kida_coa_rotated}};
+\pic[rotate=-90, transform shape] () at (0, -12) {cardfrontdisplay={marus_coa_rotated}};
+\pic[rotate=-90, transform shape] () at (9, -12) {cardfrontdisplay={sorrell_coa_rotated}};
+
+}}
+
+
+\tikzset{player_aid_frame/.pic={
+	\fill[even odd rule, #1] (-\cardwidth/2 - \bleed, -\cardheight/2-\bleed) rectangle (\cardwidth/2+\bleed, \cardheight/2+\bleed)
+(-\cardwidth/2 + 2\bleed, -\cardheight/2 + 2\bleed) rectangle (\cardwidth/2 - 2\bleed, \cardheight/2 - 2\bleed);
+}}
+
+\tikzset{player_aid_scoring/.pic={
+\pic () at (0,0) {player_aid_frame={#1}};
+\node[minimum height=\cardheight-6\bleed, text width=\cardwidth-6\bleed, inner sep=0pt] () at (0,0) {
+{\large Wizard}
+\vspace{0.15em}
+{\setmainfont{Charter}\scriptsize
+\begin{itemize}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=1.5\bleed]
+	\item 1000 points for every country your faction controls.
+	\item 1000 points for your faction controlling your home country.
+	\item 1000 points for every piece of regalia you claim.
+	\item 1000 points for dominating the~Monster.
+\end{itemize}
+}
+\vspace{1em}
+{\large Cultist}
+%\vspace{0.125cm}
+{\setmainfont{Charter}\scriptsize
+\begin{itemize}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=1.5\bleed]
+	\item 1000 points for every country your faction controls.
+	\item 1000 points for every piece of regalia you claim.
+	\item 1000 points for feeding the~Monster.
+\end{itemize}
+}
+\vspace{1em}
+{\large The Monster}
+%\vspace{0.125cm}
+{\setmainfont{Charter}\scriptsize
+\begin{itemize}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=1.5\bleed]
+	\item 6000 points for devouring at least one wizard or cultist.
+\end{itemize}
+}
+};
+}}
+
+
+\tikzset{player_aid_turns/.pic={
+\pic () at (0,0) {player_aid_frame={#1}};
+
+\node[minimum height=\cardheight-6\bleed, text width=\cardwidth-6\bleed, inner sep=0pt] () at (0,0.1cm) {
+
+{\large Playing the Game}
+
+{\setmainfont{Charter}\scriptsize
+\begin{description}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=0pt, labelsep=0.75ex, itemindent=0pt]
+	\item On your turn you must either manipulate the shrines or advance the ritual spell.
+\end{description}
+}
+
+\vspace{0.25em}
+
+{\large Manipulate the Shrines}
+
+{\setmainfont{Charter}\scriptsize
+\begin{description}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=0pt, labelsep=0.75ex, itemindent=0pt]
+	\item Pick up one or more of your pawns.
+	\vspace{-0.75em}
+	\item For each pawn that you picked up you must:
+	\begin{enumerate}[leftmargin=\widthof{(a)t}, itemsep=0.06125cm]
+		\item Flip one shrine card that does not have a pawn on it.
+		\item Place a pawn on the card that you flipped.
+	\end{enumerate}
+\end{description}
+}
+
+\vspace{0.25em}
+
+{\large Advance the Ritual Spell}
+
+{\setmainfont{Charter}\scriptsize
+\begin{description}[itemsep=0.06125cm, topsep=0.06125cm, parsep=0pt, leftmargin=0.0\bleed, labelsep=0.75ex, itemindent=0pt]
+	\item Flip one of the face down outcome cards so that it is face up.
+	\vspace{0.125cm}
+	\item The game ends when the last outcome card is turned face up.
+\end{description}
+}
+};
+}}
+
+\tikzset{playeraiddisplaysmall/.pic={
+	\begin{scope}
+	\clip[rounded corners = 0.0125in, inner sep=0pt] (-\cardwidth/2, 0in) --%
+	      (-\cardwidth/2, \cardheight/2) --%
+	      (\cardwidth/2, \cardheight/2) --%
+	      (\cardwidth/2, -\cardheight/2) --%
+	      (-\cardwidth/2, -\cardheight/2) --%
+	      cycle;
+
+	\pic at (0,0) {player_aid_scoring={#1}};
+	\node[minimum height=3.5in, minimum width=2.5in, draw, ultra thin, rounded corners = 0.0125in, inner sep=0pt] () at (0,0) {};
+	\end{scope}
 }}
