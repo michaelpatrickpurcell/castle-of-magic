@@ -1,0 +1,42 @@
+\documentclass[a4paper, oneside]{article}
+\usepackage{castle_of_magic}
+\usepackage[margin=0.125in]{geometry}
+\usepackage[skip=0pt]{parskip}
+
+\setmainfont[Scale=3.0]{TeX Gyre Chorus}
+\pagestyle{empty}
+
+\begin{document}
+\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in]
+\pic () at (0,0) {cardbackprintable={Ritual}};
+\pic () at (\horizdist,0) {cardbackprintable={Ritual}};
+\pic () at (2\horizdist,0) {cardbackprintable={Ritual}};
+
+\pic () at (0,-\vertdist) {cardbackprintable={Ritual}};
+%\pic () at (\horizdist,-\vertdist) {cardbackprintable={Outcome}};
+\pic () at (2\horizdist,-\vertdist) {cardbackprintable={Ritual}};
+
+\pic () at (0,-2\vertdist) {cardbackprintable={Ritual}};
+\pic () at (\horizdist,-2\vertdist) {cardbackprintable={Ritual}};
+\pic () at (2\horizdist,-2\vertdist) {cardbackprintable={Ritual}};
+\end{tikzpicture}	
+\end{center}
+\newpage
+\setmainfont[Scale=1.0]{TeX Gyre Chorus}\phantom{a}\setmainfont[Scale=3.0]{TeX Gyre Chorus}
+\begin{center}
+\begin{tikzpicture}[x=1in, y=1in, transform shape]
+\pic () at (0,0) {cardfrontprintable={ringing_closed_unlit}};
+\pic () at (\horizdist, 0) {cardfrontprintable={silent_open_unlit}};
+\pic () at (2\horizdist, 0) {cardfrontprintable={silent_closed_lit}};
+
+\pic () at (0, -\vertdist) {cardfrontprintable={silent_closed_unlit}};
+\pic () at (2\horizdist, -\vertdist) {cardfrontprintable={ringing_open_lit}};
+
+\pic () at (0, -2\vertdist) {cardfrontprintable={silent_open_lit}};
+\pic () at (\horizdist, -2\vertdist) {cardfrontprintable={ringing_closed_lit}};
+\pic () at (2\horizdist, -2\vertdist) {cardfrontprintable={ringing_open_unlit}};
+\end{tikzpicture}	
+\end{center}
+\end{document}
